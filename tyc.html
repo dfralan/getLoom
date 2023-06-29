@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Widget button, feedback, hotjar" />
+    <meta name="author" content="@dfralan" />
+    <title loom="Loom.js - Terms & Conditions ?? Wep">Loom.js - Terms & Conditions</title>
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="src/assets/loom.ico" />
+    <!-- Bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="src/css/boot.css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <!-- Theme SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+      </symbol>
+    </svg>
+
+    <!-- Theme Selector -->
+    <div id="themeSelector" style="transition: ease-in-out 0.3s;" class="dropdown position-fixed bottom-0 end-0 mb-4 me-4 bd-mode-toggle d-flex align-items-center">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+        aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+            aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+              <use href="#sun-fill"></use>
+            </svg>
+            <span loom="Light ?? Claro ?? Leve ?? Clair ?? Chiaro"></span>
+            <svg class="bi ms-auto d-none" width="1em" height="1em">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+            aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            <span loom="Dark ?? Oscuro ?? Escuro ?? Foncé ?? Scuro"></span>
+            <svg class="bi ms-auto d-none" width="1em" height="1em">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+            aria-pressed="true">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+              <use href="#circle-half"></use>
+            </svg>
+            <span loom="Auto"></span>
+            <svg class="bi ms-auto d-none" width="1em" height="1em">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <nav class="fixed-top bg-body navbar d-flex align-items-center navbar-expand-lg px-4">
+      <div class="container-fluid p-0">
+
+        <!-- Logo -->
+        <a class="navbar-brand d-flex fs-4" href="index.html">
+          <div class="text-end">Loom
+            <div class="fw-light" style="font-size: x-small; margin-top: -0.5rem;" loom="by Teller">
+            </div>
+          </div>
+        </a>
+
+        <!-- Loom language switcher -->
+        <loom class="nav-link dropdown align-items-center d-flex" flag="circular">
+
+          <a class="nav-link dropdown-toggle btn btn-secondary p-1 align-items-center" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false" loom-indicator>
+          </a>
+          <ul class="dropdown-menu" loom-list>
+            <li role="button" class="dropdown-item" loom-language="us"></li>
+            <li role="button" class="dropdown-item" loom-language="ar"></li>
+            <li role="button" class="dropdown-item" loom-language="br"></li>
+            <li role="button" class="dropdown-item" loom-language="fr"></li>
+            <li role="button" class="dropdown-item" loom-language="it"></li>
+          </ul>
+
+          <!-- Collapse header button -->
+          <a id="navbar-toggler-icon" class="navbar-toggler bi bi-plus fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"></a>
+          
+        </loom>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav gap-3 align-items-center">
+            <a class="nav-link px-0" href="index.html" loom="Home"></a>
+            <a class="nav-link px-0" href="https://github.com/dfralan/loom" loom="Developers" target="_blank"></a>
+            <a id="navBarTellerLaunch" class="nav-link px-0" loom="Need Help?" role="button" ></a>
+            <a class="nav-link btn px-3 bg-body-inverted text-body-emphasis-inverted" loom="Ask for Quote" href="index.html#QUOTE"></a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- Exit attempt modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+      <div class="modal-dialog">
+
+        <div class="modal-content rounded-4 shadow p-4">
+
+          <div class="modal-header border-bottom-0 align-items-baseline">
+            <h3 class="fw-bolder pe-3" loom="You're still in time!"></h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <img style="bottom: 0; right: -25px;" class="z-3 position-absolute" src="src/assets/basket.png" width="140"
+            alt="...">
+
+          <div class="modal-body py-0">
+
+            <ul class="d-grid gap-4 list-unstyled small py-2 ps-2 pe-5">
+              <li class="d-flex gap-3">
+                <div>
+                  <h5 class="fw-bold">
+                    <span class="bi bi-star-fill text-purple"></span>
+                    <span loom="Increase interactions"></span>
+                  </h5>
+                  <h6 class="fw-light" loom="Boost conversions and sales"></h6>
+                </div>
+              </li>
+              <li class="d-flex gap-3">
+                <div>
+                  <h5 class="fw-bold">
+                    <span class="bi bi-star-fill text-purple"></span>
+                    <span loom="Speak their language"></span>
+                  </h5>
+                  <h6 class="fw-light" loom="Reach a broader audience"></h6>
+                </div>
+              </li>
+              <li class="d-flex gap-3">
+                <div>
+                  <h5 class="fw-bold">
+                    <span class="bi bi-star-fill text-purple"></span>
+                    <span loom="Give greater credibility"></span>
+                  </h5>
+                  <h6 class="fw-light" loom="Increase user trust"></h6>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+
+          <!-- Input email -->
+          <div class="modal-footer flex-column align-items-stretch w-100 pb-3 border-top-0 text-center">
+            <div class="input-group-lg">
+              <input type="email" class="form-control" id="attemptExitEmailInput" aria-describedby="emailHelp" loom-placeholder="Enter email" loom>
+            </div>
+            <button loom="Get a free quote ?? Obtén un presupuesto sin cargo ?? Obtenha um orçamento gratuito ?? Obtenez un devis gratuit ?? Ottieni un preventivo gratuito" id="submitOnAttempt" type="button" class="text-dark btn btn-lg flawless-button btn-warning w-100" data-bs-dismiss="modal">
+              
+            </button>
+            <small style="font-size: x-small" class="text-body-secondary px-5" loom="By submitting this form, you agree to our Terms and Conditions, and our Privacy Policy. We'll never share your email with anyone else."></small>
+          </div>
+
+        </div>
+
+      </div>
+      
+    </div>
+
+    <!-- ALL T&C -->
+    <div class="p-4">
+        <!-- TYC -->
+        <div id="TYC" class="mt-5">
+            <div class="col-md-8 offset-md-2">
+                <img src="src/assets/sir.png" alt="..." width="200">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Términos y Condiciones</h2>
+                        <p class="card-text fst-italic">Fecha última actualización: 12/06/2023</p>
+                        <p class="card-text">
+                            Bienvenido a nuestro sitio web. Si continúas navegando y utilizando este sitio, aceptas
+                            cumplir y estar sujeto a los siguientes términos y condiciones de uso, que junto con nuestra
+                            política de privacidad rigen nuestra relación contigo y nuestro sitio web. Si no
+                            estás de acuerdo con alguno de estos términos y condiciones, por favor no utilices nuestro
+                            sitio web.
+                        </p>
+                        <p class="card-text fw-bold">
+                            CADA USUARIO DEBERÁ LEER ATENTAMENTE ESTAS CONDICIONES GENERALES, YA QUE LAS MISMAS
+                            CONTIENEN INFORMACIÓN IMPORTANTE SOBRE LOS DERECHOS Y OBLIGACIONES LEGALES DE LOOM Y LOS
+                            USUARIOS. EL ACCESO Y/O LA UTILIZACIÓN DEL SITIO, Y/O DE CUALQUIERA DE LOS SERVICIOS POR
+                            PARTE DE UN USUARIO, IMPLICA QUE DICHO USUARIO HA LEÍDO, COMPRENDE Y ACEPTA SOMETERSE A LAS
+                            PRESENTES CONDICIONES GENERALES.
+                        </p>
+                        <p class="card-text">
+                            El uso de este sitio web está sujeto a las siguientes condiciones de uso:
+                        </p>
+                        <p class="card-text">
+                            <span class="fw-semibold">1. </span>El contenido de las páginas de este sitio web es solo
+                            para información general y uso personal. Está sujeto a cambios sin previo aviso.
+                        </p>
+
+                        <p><span class="fw-semibold">2. </span>Ni nosotros ni ningún tercero proporcionamos ninguna
+                            garantía en cuanto a la exactitud, puntualidad, rendimiento, integridad o idoneidad de la
+                            información y los materiales encontrados u ofrecidos en este sitio web para cualquier
+                            propósito en particular. Reconoces que dicha información y materiales pueden contener
+                            inexactitudes o errores y excluimos expresamente la responsabilidad por cualquier
+                            inexactitud o error en la máxima medida permitida por la ley.</p>
+
+                        <p> <span class="fw-semibold">3. </span>El uso de cualquier información o material en este sitio
+                            web es bajo tu propio riesgo, y no seremos responsables.
+                            Es tu responsabilidad asegurarte de que cualquier producto,
+                            servicio o información disponible a través de este sitio web cumpla con tus requisitos
+                            específicos</p>
+
+                        <p> <span class="fw-semibold">4. </span>Este sitio web contiene material que es propiedad
+                            nuestra o licenciado para nosotros. Este material incluye, pero no se limita a,
+                            el diseño, la apariencia, los gráficos y la reproducción. Queda prohibida cualquier
+                            distribución, reproducción o redistribución de estos materiales, excepto en los casos
+                            permitidos por la ley de derechos de autor, que forma parte de estos términos y condiciones.
+                        </p>
+
+                        <p> <span class="fw-semibold">5. </span>Todas las marcas comerciales reproducidas en este sitio
+                            web, que no son propiedad o están licenciadas al operador, son reconocidas en el sitio web.
+                        </p>
+
+                        <p> <span class="fw-semibold">6. </span>El uso no autorizado de este sitio web puede dar lugar a
+                            una reclamación por daños y/o un delito penal.</p>
+
+                        <p> <span class="fw-semibold">7. </span>Desde nuestro sitio web, puedes visitar otros sitios web
+                            a través de enlaces que te proporcionamos. No tenemos control sobre el contenido y la
+                            disponibilidad de esos sitios.La inclusión de enlaces no implica necesariamente una
+                            recomendación
+                            o respaldo de las opiniones expresadas en los sitios vinculados.</p>
+
+                        <p> <span class="fw-semibold">8. </span>Estamos comprometidos a proteger tu privacidad. Nuestra
+                            <a href="#PP">Política de privacidad</a> establece cómo utilizamos y protegemos cualquier información que
+                            proporciones cuando utilices este sitio web. Al utilizar nuestro sitio web, aceptas el
+                            uso de tu información de acuerdo con nuestra política de privacidad.</p>
+
+                        <p> <span class="fw-semibold">9. </span>Este sitio web utiliza <a href="#COOKIES">Cookies</a>
+                            para monitorear las
+                            preferencias de navegación. Si permites su uso, podemos almacenar información
+                            personal para su utilizacion por parte de terceros sin tu consentimiento expreso.</p>
+
+                        <h5 class="card-text fw-semibold">Exención de Responsabilidad</h5>
+
+                        <p class="card-text">
+                            El uso de nuestro servicio de software de traducción está sujeto a la siguiente exención de
+                            responsabilidad:
+                        </p>
+
+
+                        <p class="card-text">
+                            <span class="fw-semibold">1. </span>Nuestro servicio de software de traducción utiliza
+                            tecnología automatizada para proporcionar traducciones. Aunque nos esforzamos por ofrecer
+                            traducciones precisas, no garantizamos la exactitud, confiabilidad o idoneidad.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">2. </span>No nos hacemos responsables de cualquier error,
+                            inexactitud o interpretación incorrecta que pueda surgir de la utilización de nuestro
+                            servicio de software de traducción. La traducción automática puede tener limitaciones y no
+                            puede reemplazar la precisión y la comprensión de un traductor humano.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">3. </span>Al utilizar nuestro servicio de software de traducción,
+                            aceptas que eres el único responsable de revisar y verificar la exactitud y la adecuación de
+                            las traducciones generadas. No nos hacemos responsables de ningún daño o perjuicio,
+                            incluyendo pérdida de datos, pérdida de ingresos o cualquier otro daño directo o indirecto,
+                            que pueda surgir como resultado del uso de nuestro servicio de software de traducción.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">4. </span>Te recomendamos encarecidamente que consultes a un
+                            traductor profesional o realices una revisión exhaustiva de las traducciones generadas por
+                            nuestro servicio antes de utilizarlas con fines oficiales, legales o críticos.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">5. </span>Nos reservamos el derecho de modificar, suspender o
+                            interrumpir el servicio de software de traducción en cualquier momento sin previo aviso. No
+                            seremos responsables por cualquier pérdida o daño que puedas sufrir como resultado de dicha
+                            modificación, suspensión o interrupción del servicio.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">6. </span>El uso de nuestro servicio de software de traducción se
+                            realiza bajo tu propio riesgo. No ofrecemos garantías de ningún tipo, ya sean expresas o
+                            implícitas, incluyendo, pero no limitado a, garantías de comerciabilidad, adecuación para un
+                            propósito particular o no infracción.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">7. </span>Al utilizar nuestro servicio de software de traducción,
+                            aceptas estos términos y condiciones, así como la exención de responsabilidad antes
+                            mencionada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PP -->
+        <div id="PP" class="mt-5">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Política de Privacidad</h2>
+                        <p class="card-text fst-italic">Fecha última actualización: 12/06/2023</p>
+                        <p class="card-text">
+                            Esta Política de Privacidad establece cómo recopilamos, utilizamos y protegemos la
+                            información
+                            personal que nos proporcionas cuando utilizas nuestro sitio web. Nos comprometemos a
+                            respetar
+                            tu privacidad y a proteger tus datos personales de acuerdo con las leyes y regulaciones
+                            aplicables.
+                        </p>
+
+                        <h5 class="card-text fw-semibold">Recopilación de Información</h5>
+
+                        <p class="card-text">
+                            Cuando te comunicas con nosotros a través de nuestros formularios de contacto o te registras
+                            en nuestro sitio web, podemos recopilar la siguiente información personal:
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">1. </span>Información de contacto, incluyendo tu nombre,
+                            dirección de correo electrónico y número de teléfono.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">2. </span>Información de inicio de sesión, en caso de que elijas
+                            crear una cuenta en nuestro sitio web.
+                        </p>
+
+                        <h5 class="card-text fw-semibold">Uso de la Información</h5>
+
+                        <p class="card-text">
+                            Utilizamos la información personal recopilada para los siguientes propósitos:
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">1. </span>Responder a tus consultas y brindarte la información
+                            solicitada.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">2. </span>Proporcionar los servicios y productos que has
+                            solicitado.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">3. </span>Administrar tu cuenta, en caso de que hayas creado una.
+                        </p>
+
+                        <p class="card-text">
+                            <span class="fw-semibold">4. </span>Personalizar tu experiencia en nuestro sitio web y
+                            ofrecerte contenido relevante.
+                        </p>
+
+                        <h5 class="card-text fw-semibold">Protección de la Información</h5>
+                        <p class="card-text">
+                            Valoramos la seguridad de tus datos personales y hemos implementado medidas técnicas y
+                            organizativas adecuadas
+                            para protegerlos contra el acceso no autorizado, la divulgación, alteración o destrucción
+                            accidental.
+                            Sin embargo, debes tener en cuenta que ninguna transmisión de datos a través de Internet o
+                            almacenamiento
+                            en línea puede garantizar una seguridad absoluta.
+                        </p>
+
+                        <h5 class="card-text fw-semibold">Divulgación a Terceros</h5>
+                        <p class="card-text">
+                            No vendemos, intercambiamos ni transferimos de ninguna manera tu información personal a
+                            terceros sin tu
+                            consentimiento expreso, excepto cuando sea necesario para cumplir con los fines específicos
+                            mencionados
+                            anteriormente o cuando estemos legalmente obligados a hacerlo.
+                        </p>
+
+                        <h5 class="card-text fw-semibold">Enlaces a Terceros</h5>
+                        <p class="card-text">
+                            Nuestro sitio web puede contener enlaces a sitios web de terceros. Ten en cuenta que no
+                            tenemos control
+                            sobre el contenido o las políticas de privacidad de estos sitios. Te recomendamos revisar
+                            las políticas
+                            de privacidad de estos sitios antes de proporcionarles cualquier información personal.
+                        </p>
+
+                        <h5 class="card-text fw-semibold">Cookies</h5>
+                        <p class="card-text">
+                            Utilizamos cookies y tecnologías similares para mejorar tu experiencia de navegación en
+                            nuestro sitio web.
+                            Puedes gestionar tus preferencias de cookies a través de la configuración de tu navegador.
+                            Para obtener más información sobre cómo utilizamos las cookies, consulta nuestra
+                            <a href="#COOKIES">Política de
+                                Cookies</a>.
+                        </p>
+
+                        <h5 class="card-text fw-semibold">Tus Derechos</h5>
+                        <p class="card-text">
+                            Tienes derecho a acceder, corregir, actualizar o eliminar tu información personal que
+                            tengamos almacenada.
+                            Si deseas ejercer alguno de estos derechos o tienes alguna pregunta sobre nuestra Política
+                            de Privacidad,
+                            contáctanos a través de los datos de contacto proporcionados al final de esta página.
+                        </p>
+
+                        <h5 class="card-text fw-semibold">Modificaciones a la Política de Privacidad</h5>
+                        <p class="card-text">
+                            Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento.
+                            Te recomendamos revisar periódicamente esta página para estar al tanto de cualquier cambio.
+                            Cualquier modificación será efectiva desde el momento de su publicación en nuestro sitio
+                            web.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COOKIES -->
+        <div id="COOKIES" class="mt-5">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Política de Cookies</h2>
+                        <p class="card-text fst-italic">Fecha última actualización: 12/06/2023</p>
+                        <p class="card-text">
+                            Esta política de cookies explica cómo utilizamos las cookies en nuestro sitio web. Al
+                            utilizar nuestro sitio, aceptas el uso de cookies de acuerdo con esta política.
+                        </p>
+
+                        <h4 class="card-title">¿Qué son las cookies?</h4>
+                        <p class="card-text">
+                            Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas
+                            nuestro sitio web. Estas cookies nos permiten reconocerte y recordar tus preferencias para
+                            mejorar tu experiencia de navegación y personalizar el contenido que se te muestra.
+                        </p>
+
+                        <h4 class="card-title">¿Qué cookies utilizamos?</h4>
+                        <p class="card-text">
+                            Utilizamos cookies para el registro de correo electrónico y para monitorear las preferencias
+                            de navegación. Estas cookies nos permiten almacenar información personal para uso de
+                            terceros sin tu consentimiento expreso.
+                        </p>
+
+                        <h4 class="card-title">Gestión de las cookies</h4>
+                        <p class="card-text">
+                            Puedes administrar tus preferencias de cookies a través de la configuración de tu navegador.
+                            Ten en cuenta que al desactivar ciertas cookies, es posible que algunas funcionalidades de
+                            nuestro sitio web no estén disponibles.
+                        </p>
+
+                        <h4 class="card-title">Enlaces a terceros</h4>
+                        <p class="card-text">
+                            Nuestro sitio web puede contener enlaces a otros sitios de terceros. Estos sitios tienen sus
+                            propias políticas de cookies, por lo que te recomendamos revisar sus respectivas políticas
+                            cuando los visites.
+                        </p>
+
+                        <h4 class="card-title">Modificaciones a la política de cookies</h4>
+                        <p class="card-text">
+                            Nos reservamos el derecho de modificar esta política de cookies en cualquier momento.
+                            Cualquier cambio será efectivo desde el momento de su publicación en nuestro sitio web.
+                        </p>
+
+                        <p class="card-text">
+                            Para obtener más información sobre cómo utilizamos y protegemos tus datos personales,
+                            consulta nuestra <a href="#PP">Política de Privacidad</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div id="IncentToContact" class="p-4" role="button">
+            <div class="row">
+                <div class="card bg-body-inverted border-0 col-xxl-6 col-xl-7 col-sm-10 col-md-8 mx-auto row gap-1">
+                    <div class="card-body p-4">
+                        <div class="row flex-wrap gap-1">
+                            <p class="fw-semibold text-body-emphasis-inverted pe-5 pb-0 mb-0" loom="Contact us"></p>
+                            <small class="fw-light text-body-emphasis-inverted pe-5" loom="If you have any concerns about how we collect, store, or use your data, please don't hesitate to contact us so that we can address your concerns appropriately.">
+                            </small>
+                        </div>
+                        <img src="src/assets/ok.png" style="bottom: 0; right: -30px; width: 150px; position: absolute;" alt="traductor">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- Notification -->
+    <div aria-live="polite" aria-atomic="true" class="">
+      <div class="position-fixed toast-container p-3 bottom-0 start-50 translate-middle-x">
+        <div id="liveToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+            <div id="toastBody" class="toast-body" loom>
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="px-4 container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pb-5 my-5 px-1">
+
+        <div class="col mb-3">
+          <a href="#" class="align-items-center mb-3 link-body-emphasis text-decoration-none">
+            <h1>oo</h1>
+          </a>
+          <p class="text-body-secondary">&copy; Loom 2023
+          </p>
+          <p class="fs-6 fw-lighter" loom="Our mission is to break down cultural barriers, creating a more seamless and accessible global communication for all individuals. Code licensed under the Apache License, Version 2.0, and documentation licensed under CC BY 3.0. Currently v2.0.1.">
+          </p>
+        </div>
+
+        <div class="col mb-3">
+        </div>
+
+        <div class="col mb-3">
+          <h5 loom="Product"></h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary" loom="Home"></a></li>
+            <li class="nav-item mb-2"><a href="#INTEGRATION" class="nav-link p-0 text-body-secondary" loom="Developers"></a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5 loom="Resources"></h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://github.com/dfralan/loom" class="nav-link p-0 text-body-secondary" loom="Github"></a></li>
+            <li class="nav-item mb-2"><a href="#INTEGRATION" class="nav-link p-0 text-body-secondary" loom="CDN"></a></li>
+            <li class="nav-item mb-2"><a href="tyc.html#TYC" class="nav-link p-0 text-body-secondary" loom="Terms & Conditions"></a></li>
+            <li class="nav-item mb-2"><a href="tyc.html#COOKIES" class="nav-link p-0 text-body-secondary" loom="Cookies"></a></li>
+            <li class="nav-item mb-2"><a href="tyc.html#PP" class="nav-link p-0 text-body-secondary" loom="Privacy Policy"></a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5 loom="Support"></h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2" role="button">
+              <a id="footerTellerLaunch" class="nav-link p-0 text-body-secondary" loom="Need Help?"></a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#QUOTE" class="nav-link p-0 text-body-secondary" loom="Ask for Quote"></a>
+            </li>
+          </ul>
+        </div>
+
+      </footer>
+    </div>
+
+    <!-- Cookies Section -->
+    <div id="cookiesModal" class="z-3 bottom-0 start-0 position-fixed bg-body vw-100 px-2 pt-3 pb-4" style="display: none;">
+      <footer class="col-8 col-xxl-6 col-xl-6 mx-auto row gap-1">
+
+        <h5 loom="We care about your privacy">
+        </h5>
+        <small loom="By clicking 'Accept All Cookies', you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.">
+        </small>
+        <div class="d-flex flex-wrap gap-2">
+          <button id="btnAcceptCookies" type="button" class="btn btn-primary btn-sm" loom="Accept All Cookies"></button>
+          <button id="btnDeclineCookies" type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast" loom="Decline All"></button>
+        </div>
+
+      </footer>
+    </div>
+
+    <!-- Teller Button -->
+    <teller style="transition: ease-in-out 0.3s;" class="bottom-0 start-0 mb-4 ms-4" lang="en" supportHours="12:00/13:59(-03:00)" tellerMode="brick" side="left"
+      borderRadius="15" theme="light" tintColor="#4367F2" appearAfter="0"
+      formUrl="https://docs.google.com/forms/d/e/1FAIpQLSd-JU7y43Pf0Y1DzHIrnIYyZIoQY_CxIHqu6etU-AHg4vvZSg/viewform?usp=pp_url&entry.972628122=sad&entry.131831582=pepe@pepe&entry.1647376085=Hola&entry.1069296986=hoy">
+    </teller>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Theme Switcher -->
+    <script src="src/js/color-modes.js"></script>
+    <!-- Ouibounce -->
+    <script src="src/js/ouibounce.js"></script>
+    <!-- Core JS -->
+    <script src="src/js/app.js"></script>
+    <!-- Teller CDN -->
+    <script src="src/js/teller.js"></script>
+    <!-- Loom Switch Translator -->
+    <script src="src/js/loom.js"></script>
+    <!-- Loom Translations -->
+    <script src="src/js/loomTranslations.js"></script>
+
+  </body>
+
+</html>
