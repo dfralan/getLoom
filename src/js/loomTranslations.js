@@ -368,12 +368,12 @@ const loomTranslations = {
         "fr": "Notre mission est de briser les barrières culturelles, en créant une communication globale plus fluide et accessible pour toutes les personnes. Code sous licence Apache License, Version 2.0, et documentation sous licence CC BY 3.0. Actuellement en version 2.0.1.",
         "it": "La nostra missione è abbattere le barriere culturali, creando una comunicazione globale più fluida e accessibile per tutte le persone. Codice con licenza Apache License, Version 2.0, e documentazione con licenza CC BY 3.0. Attualmente v2.0.1."
     },
-    "We care about your privacy": {
-        "us": "We care about your privacy",
-        "ar": "Nos importa tu privacidad",
-        "br": "Preocupamo-nos com a tua privacidade",
-        "fr": "Nous nous soucions de votre vie privée",
-        "it": "Ci preoccupiamo della tua privacy"
+    "But first, cookies 🍪": {
+        "us": "But first, cookies 🍪",
+        "ar": "Pero primero, las cookies 🍪",
+        "br": "Mas primeiro, os cookies 🍪",
+        "fr": "Mais d'abord, les cookies 🍪",
+        "it": "Ma prima di tutto, cookie 🍪"
     },
     "By clicking 'Accept All Cookies', you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts": {
         "us": "By clicking 'Accept All Cookies', you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts",
