@@ -114,7 +114,7 @@
       checkUserLang()
     }
     
-    if (loomList) {
+    if (loomList && welcomeHeader) {
       // Loom selector listener
       loomList.addEventListener("click", function (event) {
         const selectedLoom = event.target.getAttribute('loom-language');
