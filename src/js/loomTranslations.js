@@ -967,5 +967,20 @@ const loomTranslations = {
         "fr": "Bonjour ! Donnez-nous votre avis.",
         "it": "Ciao! Fornisci un feedback.",
         "de": "Hallo! Geben Sie uns Feedback."
-    }
+    },
+    "Easy integration with most famous frameworks": {
+        "us": "Easy integration with most famous frameworks",
+        "ar": "Integración fácil con los frameworks más famosos",
+        "mx": "Integración fácil con los frameworks más famosos",
+        "es": "Integración fácil con los frameworks más famosos",
+        "br": "Integração fácil com os frameworks mais famosos",
+        "fr": "Intégration facile avec les frameworks les plus connus",
+        "it": "Integrazione semplice con i framework più famosi",
+        "de": "Einfache Integration mit den bekanntesten Frameworks"
+      }
 };
+
+
+
+
+
