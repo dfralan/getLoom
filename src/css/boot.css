@@ -9686,7 +9686,7 @@ fieldset:disabled .btn {
 .text-body-emphasis {
     --bs-text-opacity: 1;
     color: var(--bs-emphasis-color) !important;
-    fill: #0080ff;
+    fill: var(--bs-emphasis-color) !important;
 }
 
 .text-body-emphasis-inverted {
