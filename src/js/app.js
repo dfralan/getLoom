@@ -33,25 +33,30 @@
 
     // Content for welcome animation
     const recibimientos = {
+      "de": "Hallo",
+      "br": "Olá",
       "en": "Hello",
       "fr": "Bonjour",
       "it": "Ciao",
-      "pt": "Olá",
       "id": "Halo",
+      "ar": "Hola",
       "ja": "こんにちは",
-      "ar": "مرحبا",
+      "sa": "مرحبا",
       "de": "Guten Tag",
       "ru": "Привет",
       "hi": "नमस्ते",
       "zh": "你好",
       "ko": "안녕하세요",
       "tr": "Merhaba",
-      "nl": "Hallo",
+      "es": "Hola",
       "sv": "Hej",
       "pl": "Cześć",
       "cs": "Ahoj",
       "da": "Hej",
+      "mx": "Hola",
       "fi": "Hei",
+      "gb": "Hello",
+      "pt": "Olá",
       "el": "Γεια σας",
       "hu": "Sziasztok",
       "th": "สวัสดี",
@@ -61,23 +66,68 @@
       "uk": "Привіт",
       "vi": "Xin chào",
       "bg": "Здравейте",
+      "us": "Hello",
     };
 
-
     const welcomeHeader = document.getElementById("welcomeHeader");
-    // Animation for welcome hero section
-    if (welcomeHeader) {
-      function changeHeaderText() {
+    const loomList = document.querySelector("[loom-list]");
+    let intervalId;
+
+    function changeHeaderText() {
         let index = 0;
         const languages = Object.keys(recibimientos);
-
-        setInterval(() => {
+        intervalId = setInterval(() => {
           welcomeHeader.textContent = recibimientos[languages[index]];
           index = (index + 1) % languages.length;
         }, 3000);
-      }
-    changeHeaderText();
     }
+
+    function stopHeaderTextChange() {
+      clearInterval(intervalId); // Call clearInterval with the stored intervalId
+    }
+
+    function checkUserLang() {
+      var a = (navigator.language || navigator.userLanguage || navigator.browserLanguage)
+      if (a){
+        let aTwoFirst = a.substring(0, 2);
+        if (recibimientos[aTwoFirst]){
+          welcomeHeader.textContent = recibimientos[aTwoFirst]
+          setTimeout(function () {
+            stopHeaderTextChange()
+            changeHeaderText()
+          }, 3000);
+        }
+        else {
+          welcomeHeader.textContent = recibimientos[0]
+          stopHeaderTextChange()
+          changeHeaderText()
+        }
+      } else {
+        welcomeHeader.textContent = recibimientos[0]
+        stopHeaderTextChange()
+        changeHeaderText()
+      }
+    }
+
+    // Animation for welcome hero section
+    if (welcomeHeader) {
+      checkUserLang()
+    }
+    
+    if (loomList) {
+      // Loom selector listener
+      loomList.addEventListener("click", function (event) {
+        const selectedLoom = event.target.getAttribute('loom-language');
+        let valuee = recibimientos[selectedLoom];
+        if (valuee) {
+          stopHeaderTextChange()
+          welcomeHeader.textContent = valuee
+            changeHeaderText()
+        }
+
+      });
+    }
+    
 
     // Hide widgets when scrolling
     let didScroll = false;
