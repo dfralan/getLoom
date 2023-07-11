@@ -978,7 +978,7 @@ const loomTranslations = {
         "it": "Integrazione semplice con i framework più famosi",
         "de": "Einfache Integration mit den bekanntesten Frameworks"
     },
-    "Easy integration with most famous frameworks": {
+    "© 2023 getloom.co. All rights reserved. LOOM is not a trademark owned by getloom.co, nor does it represent a legal entity.": {
         "us": "© 2023 getloom.co. All rights reserved. LOOM is not a trademark owned by getloom.co, nor does it represent a legal entity.",
         "ar": "© 2023 getloom.co. Todos los derechos reservados. LOOM no es una marca registrada propiedad de getloom.co, ni representa una entidad legal.",
         "mx": "© 2023 getloom.co. Todos los derechos reservados. LOOM no es una marca registrada propiedad de getloom.co, ni representa una entidad legal.",
