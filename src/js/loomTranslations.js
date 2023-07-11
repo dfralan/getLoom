@@ -977,7 +977,17 @@ const loomTranslations = {
         "fr": "Intégration facile avec les frameworks les plus connus",
         "it": "Integrazione semplice con i framework più famosi",
         "de": "Einfache Integration mit den bekanntesten Frameworks"
-      }
+    },
+    "Easy integration with most famous frameworks": {
+        "us": "© 2023 getloom.co. All rights reserved. LOOM is not a trademark owned by getloom.co, nor does it represent a legal entity.",
+        "ar": "© 2023 getloom.co. Todos los derechos reservados. LOOM no es una marca registrada propiedad de getloom.co, ni representa una entidad legal.",
+        "mx": "© 2023 getloom.co. Todos los derechos reservados. LOOM no es una marca registrada propiedad de getloom.co, ni representa una entidad legal.",
+        "es": "© 2023 getloom.co. Todos los derechos reservados. LOOM no es una marca registrada propiedad de getloom.co, ni representa una entidad legal.",
+        "br": "© 2023 getloom.co. Todos os direitos reservados. LOOM não é uma marca registrada de propriedade da getloom.co, nem representa uma entidade legal.",
+        "fr": "© 2023 getloom.co. Tous droits réservés. LOOM n'est pas une marque déposée détenue par getloom.co, ni ne représente une entité légale.",
+        "it": "© 2023 getloom.co. Tutti i diritti riservati. LOOM non è un marchio di proprietà di getloom.co, né rappresenta un'entità legale.",
+        "de": "© 2023 getloom.co. Alle Rechte vorbehalten. LOOM ist weder eine Marke von getloom.co noch repräsentiert sie eine juristische Person."
+    }
 };
 
 
