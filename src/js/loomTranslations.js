@@ -414,15 +414,15 @@ const loomTranslations = {
         "it": "Email",
         "de": "E-Mail"
     },
-    "Web link": {
-        "us": "Web link",
-        "ar": "Enlace web",
-        "mx": "Enlace web",
-        "es": "Enlace web",
-        "br": "Link da web",
-        "fr": "Lien web",
-        "it": "Collegamento web",
-        "de": "Web-Link"
+    "Referral code": {
+        "us": "Referral code",
+        "ar": "Código de referencia",
+        "mx": "Código de referencia",
+        "es": "Código de referencia",
+        "br": "Código de indicação",
+        "fr": "Code de parrainage",
+        "it": "Codice di riferimento",
+        "de": "Empfehlungscode"
     },
     "Message": {
         "us": "Message",
@@ -454,15 +454,15 @@ const loomTranslations = {
         "it": "Per favore, inserisci un indirizzo email valido.",
         "de": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
     },
-    "Please enter a valid website URL.": {
-        "us": "Please enter a valid website URL.",
-        "ar": "Por favor, ingresá una URL de sitio web válida.",
-        "mx": "Por favor, ingrese una URL de sitio web válida.",
-        "es": "Por favor, ingresa una URL de sitio web válida.",
-        "br": "Por favor, insira um URL válido do site.",
-        "fr": "Veuillez saisir une URL de site web valide.",
-        "it": "Per favore, inserisci un URL valido del sito web.",
-        "de": "Bitte geben Sie eine gültige Website-URL ein."
+    "Please enter a valid referral code": {
+        "us": "Please enter a valid referral code",
+        "ar": "Por favor, ingresa un código de referido válido",
+        "mx": "Por favor, ingresa un código de referencia válido",
+        "es": "Por favor, ingresa un código de referencia válido",
+        "br": "Por favor, insira um código de indicação válido",
+        "fr": "Veuillez entrer un code de parrainage valide",
+        "it": "Inserisci un codice di riferimento valido",
+        "de": "Bitte geben Sie einen gültigen Empfehlungscode ein"
     },
     "Please enter your message.": {
         "us": "Please enter your message.",
