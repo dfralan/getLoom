@@ -14,6 +14,16 @@ const loomTranslations = {
         "it": "Prodotto",
         "de": "Produkt"
     },
+    "Name or Company": {
+        "us": "Name or Company",
+        "ar": "Nombre o Compañía",
+        "mx": "Nombre o Compañía",
+        "es": "Nombre o Compañía",
+        "br": "Nome ou Empresa",
+        "fr": "Nom ou Société",
+        "it": "Nome o Azienda",
+        "de": "Name oder Firma"
+    },
     "Resources": {
         "us": "Resources",
         "ar": "Recursos",
