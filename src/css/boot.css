@@ -14082,9 +14082,35 @@ fieldset:disabled .btn {
     font-size: 2rem;
 }
 
-.bulma:hover {
-    transition: .3s;
+.smooty {
+    transition: .2s;
+}
+.bulmay:hover {
     fill: #00D1B2 !important;
-  }
+}
+
+.bootstrapy:hover {
+    fill: #663AEF !important;
+}
+
+.reacty:hover {
+    fill: #5BCFF2 !important;
+}
+
+.vuejsy:hover {
+    fill: #63B587 !important;
+}
+
+.tailwindy:hover {
+    fill: #06B6D4 !important;
+}
+
+.wordpressy:hover {
+    fill: #2D72A5 !important;
+}
+
+.sveltey:hover {
+    fill: #EC4F27 !important;
+}
 
 

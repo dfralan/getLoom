@@ -86,6 +86,9 @@
       clearInterval(intervalId); // Call clearInterval with the stored intervalId
     }
 
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
     function checkUserLang() {
       var a = (navigator.language || navigator.userLanguage || navigator.browserLanguage)
       if (a){
