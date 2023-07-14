@@ -14082,3 +14082,9 @@ fieldset:disabled .btn {
     font-size: 2rem;
 }
 
+.bulma:hover {
+    transition: .3s;
+    fill: #00D1B2 !important;
+  }
+
+
