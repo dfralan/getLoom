@@ -674,6 +674,16 @@ const loomTranslations = {
         "it": "Se hai qualche preoccupazione su come raccogliamo, archiviamo o utilizziamo i tuoi dati, non esitare a contattarci in modo da poter affrontare adeguatamente le tue preoccupazioni."   ,
         "de": "Wenn du Bedenken bezüglich der Erfassung, Speicherung oder Verwendung deiner Daten hast, zögere bitte nicht, uns zu kontaktieren, damit wir deine Anliegen angemessen behandeln können."   
     },
+    "Auto": {
+        "us": "Auto",
+        "ar": "Auto",
+        "mx": "Auto",
+        "es": "Auto",
+        "br": "Auto",
+        "fr": "Auto",
+        "it": "Auto",
+        "de": "Auto"
+    }, 
     "Light": {
         "us": "Light",
         "ar": "Claro",
@@ -686,9 +696,9 @@ const loomTranslations = {
     }, 
     "Dark": {
         "us": "Dark",
-        "ar": "Escuro",
-        "mx": "Escuro",
-        "es": "Escuro",
+        "ar": "Oscuro",
+        "mx": "Oscuro",
+        "es": "Oscuro",
         "br": "Escuro",
         "fr": "Foncé",
         "it": "Scuro",
