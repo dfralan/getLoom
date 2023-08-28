@@ -85,8 +85,11 @@
         var privkey = keypair.privateKey.toString("hex")
         var pubkey = keypair.publicKey.toString("hex")
         pubkey = pubkey.substring(2)
-        console.log( pubKey);
+        console.log(`clave privada ${privkey}`);
     }
+
+    generateKeypair()
+
 
     // Generate public key from private key
     function generatePublicKey(privateKeyHex) {
