@@ -133,7 +133,7 @@ function constructBoard(BoardHash) {
 
     // revisions count
     let boardTimeStamp = `
-    <p class="timestamp font-xs color-secondary no-wrap" data-timestamp="${at}">now</p>
+    <p class="timestamp font-xs color-secondary hide-scrollbar no-wrap" data-timestamp="${at}">now</p>
     `
     boardDetails += boardTimeStamp
 

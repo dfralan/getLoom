@@ -112,6 +112,15 @@ html {
     scrollbar-width: none;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
+*{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .avatar-l {
     width: 50px;
     height: 50px;
