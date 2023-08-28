@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-tertiary">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tripwire Sales Approach</title>
+    <meta name="description"
+        content="Enhance your sales approach with Tripwire's expert insights. Discover effective strategies, tools, and techniques to boost sales performance. Stay ahead in the competitive market with our proven sales solutions.">
+    <link rel="icon" type="image/x-icon" href="src/img/logo.svg">
+    <script src="src/js/encryption/bitcoinjs-lib.js"></script>
+    <script src="src/js/encryption/secp256k1-1.2.14.js"></script>
+    <script src="src/js/encryption/browserify-cipher-1.0.1.js"></script>
+    <script src="src/js/core/tools.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+    <script src="src/js/components/icons.js"></script>
+    <script src="src/js/components/cssShorts.js"></script>
+    <script src="src/js/core/constructor.js"></script>
+    <script ></script>
+
+</head>
+
+<body class="board">
+
+    <!-- Navbar -->
+    <brik navbar></brik>
+    <script src="src/js/components/navbarView.js"></script>
+
+    <div id='workspace' data-workspace-hash=''>
+
+        <!-- Toolbar -->
+        <brik toolbar></brik>
+        <script src="src/js/components/toolbarView.js"></script>
+
+        <!-- New Dashboard -->
+        <brik newdashboard></brik>
+        <script src="src/js/components/newDashboard.js"></script>
+
+        <!-- Board Container -->
+        <brik boardcontainer></brik>
+        <script src="src/js/components/boardContainerView.js"></script>
+
+        <!-- New board modal -->
+        <brik boardcreationform></brik>
+        <script src="src/js/components/newBoardView.js"></script>
+
+        <!-- New sheet modal -->
+        <brik sheetcreationform></brik>
+        <script src="src/js/components/newSheetView.js"></script>
+
+        <!-- Deletion Board Zone -->
+        <div id="deletionZone"
+            class="fill-white padded border-dashed rounded-s boardDropZone display-flex fixed to-bottom to-right">
+            <button class="btn display-flex flex-col">
+                <h1 class="font-xxxl">🗑️</h1><span class="color-primary">Trash</span>
+            </button>
+        </div>
+    
+    <!-- New workspace modal -->
+    <brik newworkspaceform></brik>
+    <script src="src/js/components/newWorkspaceView.js"></script>
+
+    <!-- Ephemeral Notifications -->
+    <div id="ephemeralNotificationsModal"
+        class="padded notification-modal display-flex flex-col-reverse s-gap z-i full-center smooth-300">
+    </div>
+
+    <script src="src/js/core/brik.js"></script>
+    <script src="src/js/i18n/loomTranslations.js"></script>
+    <script src="src/js/i18n/loom.js"></script>
+    <script src="src/js/core/app.js"></script>
+    <script src="src/js/core/ephemeralNotifications.js"></script>
+    <script src="src/js/link/payload.js"></script>
+    <script src="src/js/link/connectionStatus.js"></script>
+    <script src="src/js/core/newBoard.js"></script>
+    <script src="src/js/core/newSheet.js"></script>
+    <script src="src/js/core/newWorkspace.js"></script>
+    <script src="src/js/core/filter.js"></script>
+</body>
+
+</body>
+
+</html>
+
+<!-- 
+<teller 
+    keyCodeTeller="dbcadceaeea4b522e42b160db3953980"
+    lang="en"
+    supportHours="12:00/13:59(-03:00)"
+    tellerMode="brick"
+    userColor="#7B43F2"
+    side="right"
+    borderRadius="10"
+    theme="dark"
+    appearAfter="20"
+    callToAction="Share your experience."
+    formUrl="https://docs.google.com/forms/d/e/1FAIpQLScM-zoy4TUoLuRHUxlgGJXbla7DJXDt9kuyMtpSw245kT6n2A/viewform?usp=pp_url&entry.1837640545=a&entry.285480112=b&entry.1021714804=c&entry.2087902729=d"
+></teller>
+<script src="https://cdn.jsdelivr.net/gh/dfralan/teller@v3.0.0/teller.js"></script>
+
+-->
