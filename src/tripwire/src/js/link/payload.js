@@ -162,7 +162,9 @@
 
                 // Hide the first time window
                 const firstTimeWindow = document.getElementById("newDashboardModal");
-                firstTimeWindow.remove();
+                if (firstTimeWindow) {
+                    firstTimeWindow.remove();
+                }
 
                 // Show new board button
                 document.getElementById('createBoardButton').classList.remove('display-none')
@@ -227,7 +229,6 @@
                         boardCreationHandler()
                     } else { // Event is not from current workspace
                         workspaceIsReady = false
-                        console.log(`WORKSPACE IS NOT READY YET, LISTEN FOR CREATION EVENT WITH THIS NAME ${eventWorkspaceHash}`)
                         window.addEventListener(eventWorkspaceHash, function() {
                             boardCreationHandler()
                         });

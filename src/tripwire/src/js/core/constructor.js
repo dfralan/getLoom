@@ -1,7 +1,74 @@
 // WORKSPACE CONSTRUCTOR
+//0 workspaceId, 2 title, 3 tags, 4 deadline, 5 at, 6 participants, 7 revisions, 8 hash event
 function constructWorkspace(workspaceHash) {
-    console.log(`CONSTRUCTOR WORKSPACE LAUNCHED CORRECTLY ${workspaceHash}`)
     window.dispatchEvent(new Event(workspaceHash));
+    let workspaceContent = JSON.parse(localStorage.getItem(workspaceHash))
+
+    let workspaceId = workspaceContent[0]
+    let title = workspaceContent[1]
+    let description = workspaceContent[2]
+
+    let tags = workspaceContent[3]
+    let deadline = workspaceContent[4]
+    let at = workspaceContent[5]
+    let participants = workspaceContent[6]
+    let revisions = workspaceContent[7]
+    let workspaceEventHash = workspaceContent[8]
+
+    let workspaceSideBar = document.getElementById('sidebar')
+    let workspaceTitleContainer = workspaceSideBar.querySelector('.sidebarTitle')
+    let workspaceDescriptionContainer = workspaceSideBar.querySelector('.sidebarDescription')
+    let workspaceSidebarTagsContainer = workspaceSideBar.querySelector('.sidebarTags')
+
+    // Amount of tags and clasification declaration
+    var phoneNumbersAmount = 0
+    var emailsAmount = 0
+    var urlsAmount = 0
+    var tagsAmount = 0
+    // Concatenated tags variable declaration
+    var workspaceTags = ''
+
+    // Create and append tag elements
+    tags.forEach(tag => {
+
+        var workspaceTagContent = decodeURIComponent(tag)
+        const urlTagClass = `bg-tint-lighter color-tint tag xxs-padded font-xs rounded-max no-wrap hide-scrollbar overflow-scroll`
+        if (isValidUrl(`${workspaceTagContent}`)){
+
+            urlsAmount++
+            var urlTagElement = `<a class="${urlTagClass}" target="_blank" href="${workspaceTagContent}">${workspaceTagContent}</a>`
+            workspaceTags += urlTagElement;
+
+        } else if (isValidEmail(`${decodeURIComponent(tag)}`)) {
+
+            emailsAmount++
+            var emailTagElement = `<a class="${urlTagClass}" target="_blank" href="mailto:${workspaceTagContent}">${workspaceTagContent}</a>`
+            workspaceTags += emailTagElement;
+            
+        } else if (isValidPhoneNumber(`${decodeURIComponent(tag)}`)) {
+
+            phoneNumbersAmount++
+            var phoneTagElement = `<a class="${urlTagClass}" target="_blank" href="tel:${workspaceTagContent}">${workspaceTagContent}</a>`
+            workspaceTags += phoneTagElement;
+
+        } else {
+            
+            tagsAmount++
+            var simpleTagElement = `<p class="${urlTagClass}">${workspaceTagContent}</p>`
+            workspaceTags += simpleTagElement;
+
+        }
+    });
+
+    console.log(workspaceTags)
+
+    
+
+    workspaceTitleContainer.innerHTML = title
+    workspaceDescriptionContainer.innerHTML = description
+    workspaceSidebarTagsContainer.innerHTML = workspaceTags
+
+
 }
 
 // BOARD CONSTRUCTOR
@@ -175,7 +242,7 @@ function constructBoard(BoardHash) {
 
         // Add access button to toolbar
         const toolbarAccessButton = document.createElement('button');
-        toolbarAccessButton.className = "bg-tertiary display-flex rounded bg-lighter color-secondary border-none full-center font-400 font-s s-padded-wide";
+        toolbarAccessButton.className = "bg-tertiary display-flex rounded bg-lighter color-secondary border-none full-center font-400 font-s s-padded-wide no-wrap";
         toolbarAccessButton.id = `accessBtn-${boardId}`
         toolbarAccessButton.innerHTML = title;
         toolbarAccessButton.onclick = function() {
@@ -318,7 +385,7 @@ function constructSheet(sheetHash) {
         <div class="sheetTagsContainer display-flex flex-wrap s-gap">${sheetTags}</div>
     </div>
     <div class="display-flex flex-row s-gap">
-        <p class="timestamp font-xs color-secondary no-wrap" data-timestamp="${at}" loom='now'></p>
+        <p class="timestamp font-xs color-secondary no-wrap" data-timestamp="${at}"></p>
         ${sheetDetails}
     </div>
     `

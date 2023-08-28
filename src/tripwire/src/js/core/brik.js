@@ -26,6 +26,8 @@ let brikStyleSheet = `
     --rounded-s: 1vh;
     --rounded-m: 1.5vh;
     --rounded-m-up: 1.5vh 1.5vh 0 0;
+    --rounded-m-end: 0 1.5vh 1.5vh 0;
+    --rounded-m-top-end: 0 1.5vh 0 0;
     --rounded-l: 2vh;
     --rounded-xl: 2.5vh;
     --rounded-xxl: 3vh;
@@ -110,6 +112,12 @@ html {
     scrollbar-width: none;
 }
 
+.avatar-l {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
 .avatar-m {
     width: 30px;
     height: 30px;
@@ -124,6 +132,14 @@ html {
 
 .min-w-250{
     min-width: 250px;
+}
+
+.min-w-350{
+    min-width: 350px;
+}
+
+.w-auto {
+    width: auto
 }
 
 .max-w-350{
@@ -698,11 +714,16 @@ html {
 }
 
 .height-100 {
-    height: 100vh;
+    height: 100%;
 }
 
 .on-mobile-pass {
     visibility: visible;
+}
+
+.on-mobile-show {
+    visibility: collapse;
+    display: none;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -740,6 +761,12 @@ html {
     .on-mobile-pass {
         visibility: collapse;
         display: none;
+    }
+
+
+    .on-mobile-show {
+        visibility: visible;
+        display: block;
     }
 
     .responsive-4 {
@@ -875,6 +902,14 @@ html {
 
 .rounded-up {
     border-radius: var(--rounded-m-up);
+}
+
+.rounded-end {
+    border-radius: var(--rounded-m-end);
+}
+
+.rounded-top-end {
+    border-radius: var(--rounded-m-top-end);
 }
 
 .rounded-l {

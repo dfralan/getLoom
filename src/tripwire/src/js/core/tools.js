@@ -148,3 +148,26 @@ document.addEventListener('click', function(event) {
 
 // Ephemeral Hash
 const genHex = (a) => Math.random().toString(16).slice(2, (a + 2));
+
+function hideSideBar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.add('hided')
+    sidebar.classList.remove('showed')
+    sidebar.style.transform = 'translateX(-350px)';
+}
+
+function showSideBar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('hided')
+    sidebar.classList.add('showed')
+    sidebar.style.transform = 'translateX(0px)';
+}
+
+function toggleSideBar() {
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar.classList.contains('hided')) {
+        showSideBar()
+    } else {
+        hideSideBar()
+    }
+}

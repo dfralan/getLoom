@@ -24,6 +24,25 @@
 
 <body class="board">
 
+
+
+
+    <div id="sidebar" style="transform: translateX(-350px); width: 350px;" class="hided transition-smooth sidebar z-i fixed bottom-0 start-0 bg-body shadow-one height-100 rounded-end border-solid border-secondary border-left-none">
+        <div class="w-100 bg-tertiary display-flex flex-col padded s-gap rounded-top-end">
+            <div onclick="hideSideBar()" class="h-center display-flex flex-row fill-primary color-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 196 196q12 12 11.5 28T508-188q-12 11-28 11.5T452-188L188-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l264-264q11-11 27.5-11t28.5 11q12 12 12 28.5T508-715L313-520h447q17 0 28.5 11.5T800-480q0 17-11.5 28.5T760-440H313Z"/></svg>
+            </div>
+            <div class="avatar-l bg-primary"></div>
+            <h4 class="sidebarTitle font-l color-secondary">Workspace Title</h4>
+        </div>
+        <div class="sidebarDescription w-100 display-flex flex-col padded s-gap color-secondary">
+            <p class="font-m color-secondary">Description here</p>
+        </div>
+        <ul class="sidebarTags boardTagsContainer display-flex flex-wrap s-gap s-padded">
+            <p class="font-l color-secondary">tags here</p>
+        </ul>
+    </div>
+
     <!-- Navbar -->
     <brik navbar></brik>
     <script src="src/js/components/navbarView.js"></script>
