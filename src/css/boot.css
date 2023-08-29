@@ -1626,6 +1626,7 @@ progress {
 }
 
 @media (min-width: 992px) {
+
     .col-lg {
         flex: 1 0 0%;
     }
@@ -6582,12 +6583,22 @@ fieldset:disabled .btn {
     }
 }
 
+
+.videoAlmostFull {
+    padding: 200px;
+}
+
 @media (max-width: 991.98px) {
     .modal-fullscreen-lg-down {
         width: 100vw;
         max-width: none;
         height: 100%;
         margin: 0;
+    }
+
+
+    .videoAlmostFull {
+        padding: 0;
     }
 
     .modal-fullscreen-lg-down .modal-content {
