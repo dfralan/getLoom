@@ -13,6 +13,21 @@ const isValidUrl = (url = '') => {
     }
 };
 
+function getDateTimeFromTimestamp(timestamp) {
+    const dateObj = new Date(timestamp * 1000);
+
+    const year = dateObj.getFullYear();
+    const month = String(dateObj.getMonth() + 1).padStart(2, '0');
+    const day = String(dateObj.getDate()).padStart(2, '0');
+    const hours = String(dateObj.getHours()).padStart(2, '0');
+    const minutes = String(dateObj.getMinutes()).padStart(2, '0');
+
+    const dateValue = `${year}-${month}-${day}`;
+    const timeValue = `${hours}:${minutes}`;
+
+    return [dateValue, timeValue];
+}
+
 // Match Youtube Video (Only the last one to be beauty)
 const transformYouTubeLinks = (input = '') => {
     const regex = /(https?:\/\/(?:www\.)?(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([a-zA-Z0-9_-]+)(?:\S+)?)/g;
@@ -63,7 +78,7 @@ const isValidPhoneNumber = (phoneNumber = '') => {
 };
 
 // Convert tags from forms to Array like: 'naranja, banana' => ['naranja','banana']
-const arrayTags = (x = '') => {
+function arrayTags(x) {
     const values = x.split(', ');
     const output = values.map(value => `"${encodeURIComponent(value)}"`);
     const arrayedTags = `[${output.join(', ')}]`;
@@ -71,7 +86,7 @@ const arrayTags = (x = '') => {
 }
 
 // Convert 
-const arrayToCommaString = (inputArray = '') => {
+function arrayToCommaString(inputArray) {
     var decodedArray = inputArray.map(item => decodeURIComponent(item));
     var result = decodedArray.join(', ');
     return result;
