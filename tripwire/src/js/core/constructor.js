@@ -60,10 +60,6 @@ function constructWorkspace(workspaceHash) {
         }
     });
 
-    console.log(workspaceTags)
-
-    
-
     workspaceTitleContainer.innerHTML = title
     workspaceDescriptionContainer.innerHTML = description
     workspaceSidebarTagsContainer.innerHTML = workspaceTags
@@ -182,6 +178,21 @@ function constructBoard(BoardHash) {
     `
     if (phoneNumbersAmount > 0) {boardDetails += phoneTagsAmountElement}
 
+    // Looking for youtube urls match
+    var iframeConstructor = ''
+    const youtubeLinks = transformYouTubeLinks(description);
+    if (youtubeLinks != '') {
+        // Aquí hay enlaces transformados en el array
+            let iframe = `
+            <div class="ratio ratio-16x9">
+                <iframe class='border-none w-100 h-56' src="${youtubeLinks}" title="YouTube video" allowfullscreen></iframe>
+            </div>
+            `
+            iframeConstructor = iframe;
+    }
+   
+
+
     var easyBoard = `
     <div class="rounded bg-body display-flex flex-col border-solid border-secondary transition-300">
         <div class="bg-tertiary display-flex rounded-up border-solid border-secondary border-top-none border-left-none border-right-none full-center spaced color-primary font-400 font-m s-padded">
@@ -196,7 +207,8 @@ function constructBoard(BoardHash) {
                 </ul>
             </div>
         </div>
-        <p class='boardDescription s-padded  font-s color-primary'>${description}</p>
+        ${iframeConstructor}
+        ${(description != '' ? `<p class='boardDescription s-padded  font-s color-primary'>${replaceUrlsWithLinks(description)}</p>` :'' )}
         <ul class="sheetContainer hide-scrollbar display-flex flex-col s-gap overflow-scroll s-padded" style="max-height: 300px;"></ul>
         <div class="boardTagsContainer display-flex flex-wrap s-gap s-padded">
             ${boardTags}
@@ -362,8 +374,21 @@ function constructSheet(sheetHash) {
     `
     if (phoneNumbersAmount > 0) {sheetDetails += phoneTagsAmountElement}
 
+    // Looking for youtube urls match
+    var iframeConstructor = ''
+    const youtubeLinks = transformYouTubeLinks(sheetDescription);
+    if (youtubeLinks != '') {
+        // Aquí hay enlaces transformados en el array
+            let iframe = `
+            <div class="ratio ratio-16x9">
+                <iframe class='border-none w-100 h-56' src="${youtubeLinks}" title="YouTube video" allowfullscreen></iframe>
+            </div>
+            `
+            iframeConstructor = iframe;
+    }
+
     var easySheet = `
-    <div class="display-flex flex-row spaced">
+    <div class="display-flex flex-row spaced s-padded no-padded-bottom">
         <h4 class="sheetTitle hide-scrollbar overflow-scroll no-wrap font-400 full-center">${title}</h4>
         <div class="display-flex flex-row full-center">
             <button onclick="expandSheet('${sheetId}')" class="hover-bg-lighter rounded-max btn hover-fill-primary fill-secondary">
@@ -380,18 +405,19 @@ function constructSheet(sheetHash) {
             </div>
         </div>
     </div>
-    <div class="sheetExpansion display-none s-gap flex-col color-primary">
-        <p class='sheetDescription s-padded no-padded-left no-padded-right no-padded-top font-s'>${sheetDescription}</p>
-        <div class="sheetTagsContainer display-flex flex-wrap s-gap">${sheetTags}</div>
+    <div class="sheetExpansion display-none display-flex s-gap flex-col color-primary">
+        ${iframeConstructor}
+        <p class='sheetDescription s-padded no-padded-top font-s'>${replaceUrlsWithLinks(sheetDescription)}</p>
+        <div class="sheetTagsContainer s-padded no-padded-top no-padded-bottom display-flex flex-wrap s-gap">${sheetTags}</div>
     </div>
-    <div class="display-flex flex-row s-gap">
+    <div class="display-flex flex-row s-gap s-padded no-padded-top">
         <p class="timestamp font-xs color-secondary no-wrap" data-timestamp="${at}"></p>
         ${sheetDetails}
     </div>
     `
 
     const eventHash = document.querySelector(`[data-event-hash="${hashEventHash}"]`)
-    const sheetClass = `tripSheet matchMeManChild show-my-child cursor-pointer bg-tertiary shadow-dynamic color-primary s-padded display-flex flex-col rounded-s s-gap border-solid border-secondary`
+    const sheetClass = `tripSheet matchMeManChild show-my-child cursor-pointer bg-tertiary shadow-dynamic color-primary display-flex flex-col rounded-s s-gap border-solid border-secondary`
     
     // Check if is an update, or an older than the actual one with same ID,
     if (eventHash){

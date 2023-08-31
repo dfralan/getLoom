@@ -163,6 +163,14 @@ html {
     max-width: 100%;
 }
 
+.w-100 {
+    width: 100%;
+}
+
+.h-56{
+    height: 56.25%;
+}
+
 .board {
     padding: 0;
 }

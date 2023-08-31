@@ -192,8 +192,6 @@
                     const newWorkspaceDecryptedArrayed = [eventWorkspaceHash, eventTitle, eventDescription, eventTagsArray, eventDeadline, eventTimeCreation, eventParticipants, revisionsAmount, eventSocketHash]
                     localStorage.setItem(eventWorkspaceHash, JSON.stringify(newWorkspaceDecryptedArrayed));
                     constructWorkspace(eventWorkspaceHash);
-
-                    console.log(`ABOUT TO CONSTRUCT WORKSPACE WITH THIS WS HASH ${eventWorkspaceHash}`)
                 }
                 workspaceCreationHandler()
 
@@ -215,8 +213,6 @@
                     let eventSocketHash = dTag[0]
 
                     var workspaceIsReady = false 
-
-                    console.log(`KIND BOARD EVENT ENTERED: WS HASH => ${eventWorkspaceHash}`)
 
                     function boardCreationHandler() {
                         const newBoardDecryptedArrayed = [eventWorkspaceHash, eventBoardId, eventTitle, eventDescription, eventTagsArray, eventDeadline, eventTimeCreation, eventParticipants, revisionsAmount, eventSocketHash]
