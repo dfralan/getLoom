@@ -208,7 +208,7 @@ function constructBoard(BoardHash) {
             </div>
         </div>
         ${iframeConstructor}
-        ${(description != '' ? `<p class='boardDescription s-padded  font-s color-primary'>${replaceUrlsWithLinks(description)}</p>` :'' )}
+        <p class='boardDescription s-padded  font-s color-primary'>${replaceUrlsWithLinks(description)}</p>
         <ul class="sheetContainer hide-scrollbar display-flex flex-col s-gap overflow-scroll s-padded" style="max-height: 300px;"></ul>
         <div class="boardTagsContainer display-flex flex-wrap s-gap s-padded">
             ${boardTags}
