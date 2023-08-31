@@ -1,5 +1,4 @@
 
-
 let brikStyleSheet = `
 @import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
@@ -699,6 +698,16 @@ html {
 .responsive-6 {
     height: fit-content;
     width: 16.66666667%;
+}
+
+.steady-1-of-3 {
+    display: flex;
+    width: calc(100% / 3);
+}
+
+.steady-2-of-3 {
+    display: flex;
+    width: calc(100% / 1.5);
 }
 
 .steady-1 {
