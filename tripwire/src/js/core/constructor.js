@@ -191,6 +191,17 @@ function constructBoard(BoardHash) {
             iframeConstructor = iframe;
     }
    
+    var boardBody = `
+    ${iframeConstructor}
+            <p class='boardDescription s-padded ${description == '' ? 'display-none' : ''} font-s color-primary'>${replaceUrlsWithLinks(description)}</p>
+            <ul class="sheetContainer hide-scrollbar display-flex flex-col s-gap overflow-scroll s-padded" style="max-height: 300px;"></ul>
+            <div class="boardTagsContainer display-flex flex-wrap s-gap s-padded">
+                ${boardTags}
+            </div>
+            <div class="boardDetailsContainer display-flex flex-row s-gap s-padded no-padded-top overflow-hidden overflow-scroll">
+                ${boardDetails}
+            </div>
+    `
 
 
     var easyBoard = `
@@ -207,14 +218,8 @@ function constructBoard(BoardHash) {
                 </ul>
             </div>
         </div>
-        ${iframeConstructor}
-        <p class='boardDescription s-padded  font-s color-primary'>${replaceUrlsWithLinks(description)}</p>
-        <ul class="sheetContainer hide-scrollbar display-flex flex-col s-gap overflow-scroll s-padded" style="max-height: 300px;"></ul>
-        <div class="boardTagsContainer display-flex flex-wrap s-gap s-padded">
-            ${boardTags}
-        </div>
-        <div class="boardDetailsContainer display-flex flex-row s-gap s-padded no-padded-top overflow-hidden overflow-scroll">
-            ${boardDetails}
+        <div class='display-flex flex-col boardBody'>
+            ${boardBody}
         </div>
     </div>`
 
@@ -233,14 +238,8 @@ function constructBoard(BoardHash) {
         const existentBoardTitle = targettedBoard.querySelector(`.boardTitle`)
         existentBoardTitle.innerHTML = title;
 
-        const existentBoardDescription = targettedBoard.querySelector(`.boardDescription`)
-        existentBoardDescription.innerHTML = description;
-
-        const existentBoardTagsContainer = targettedBoard.querySelector(`.boardTagsContainer`)
-        existentBoardTagsContainer.innerHTML = boardTags;
-
-        const existentBoardDetailsContainer = targettedBoard.querySelector(`.boardDetailsContainer`)
-        existentBoardDetailsContainer.innerHTML = boardDetails;
+        const existentBoardDescription = targettedBoard.querySelector(`.boardBody`)
+        existentBoardDescription.innerHTML = boardBody;
 
     } else {
 
