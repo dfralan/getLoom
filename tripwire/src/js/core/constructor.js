@@ -15,10 +15,9 @@ function constructWorkspace(workspaceHash) {
     let revisions = workspaceContent[7]
     let workspaceEventHash = workspaceContent[8]
 
+
     let workspaceSideBar = document.getElementById('sidebar')
-    let workspaceTitleContainer = workspaceSideBar.querySelector('.sidebarTitle')
-    let workspaceDescriptionContainer = workspaceSideBar.querySelector('.sidebarDescription')
-    let workspaceSidebarTagsContainer = workspaceSideBar.querySelector('.sidebarTags')
+    let sidebarContent = workspaceSideBar.querySelector('.sidebarContent')
 
     // Amount of tags and clasification declaration
     var phoneNumbersAmount = 0
@@ -60,10 +59,22 @@ function constructWorkspace(workspaceHash) {
         }
     });
 
-    workspaceTitleContainer.innerHTML = title
-    workspaceDescriptionContainer.innerHTML = description
-    workspaceSidebarTagsContainer.innerHTML = workspaceTags
+    var workspaceConstructor = `
+    <div class='display-flex display-row xs-gap s-padded rounded-s hover-bg-lighter'>
+        <div>
+            <span class="avatar-s display-block bg-primary"></span>
+        </div>
+        <div class='display-flex flex-col xs-gap'>
+            <p class="sidebarTitle font-s color-primary font-400">${title}</p>
+            <p class="font-xs color-secondary font-200">${description}</p>
+            <ul class="sidebarTags display-flex flex-wrap overflow-scroll xs-gap">
+                ${workspaceTags}
+            </ul>
+        </div>
+    <div>
+    `
 
+    sidebarContent.innerHTML = workspaceConstructor
 
 }
 
@@ -192,9 +203,9 @@ function constructBoard(BoardHash) {
     }
    
     var boardBody = `
-    ${iframeConstructor}
-            <p class='boardDescription s-padded ${description == '' ? 'display-none' : ''} font-s color-primary'>${replaceUrlsWithLinks(description)}</p>
+            ${iframeConstructor}
             <ul class="sheetContainer hide-scrollbar display-flex flex-col s-gap overflow-scroll s-padded" style="max-height: 300px;"></ul>
+            <p class='boardDescription s-padded ${description == '' ? 'display-none' : ''} font-s color-primary'>${replaceUrlsWithLinks(description)}</p>
             <div class="boardTagsContainer display-flex flex-wrap s-gap s-padded">
                 ${boardTags}
             </div>
@@ -232,7 +243,7 @@ function constructBoard(BoardHash) {
 
         const targettedBoard = document.getElementById(BoardHash)
 
-        const existentAccessButton = targettedWorkspace.querySelector(`#accessBtn-${BoardHash}`)
+        const existentAccessButton = targettedWorkspace.querySelector(`#${BoardHash}`)
         existentAccessButton.innerHTML = title;
 
         const existentBoardTitle = targettedBoard.querySelector(`.boardTitle`)
@@ -253,8 +264,9 @@ function constructBoard(BoardHash) {
 
         // Add access button to toolbar
         const toolbarAccessButton = document.createElement('button');
-        toolbarAccessButton.className = "bg-tertiary display-flex rounded bg-lighter color-secondary border-none full-center font-400 font-s s-padded-wide no-wrap";
+        toolbarAccessButton.className = "border-solid border-secondary bg-body display-flex rounded bg-lighter color-secondary border-none full-center font-400 font-s s-padded-wide no-wrap";
         toolbarAccessButton.id = `accessBtn-${boardId}`
+        toolbarAccessButton.style.opacity = '0.5'
         toolbarAccessButton.innerHTML = title;
         toolbarAccessButton.onclick = function() {
             toggleBoardVisibility(boardId, `accessBtn-${boardId}`);
