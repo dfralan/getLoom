@@ -265,7 +265,7 @@ html {
 }
 
 .s-padded-wide {
-    padding: 6px 8px 7px 8px;
+    padding: 5px 8px 5px 8px;
 }
 
 .padded {
@@ -1207,6 +1207,30 @@ html {
     fill: black;
 }
 `;
+
+function extractAllContentBetweenBrkTags(inputString) {
+    const brkStart = '<brk>';
+    const brkEnd = '</brk>';
+    const contentArray = [];
+    let startIndex = inputString.indexOf(brkStart);
+  
+    while (startIndex !== -1) {
+      const endIndex = inputString.indexOf(brkEnd, startIndex);
+  
+      if (endIndex !== -1) {
+        const content = inputString.substring(startIndex + brkStart.length, endIndex);
+        contentArray.push(content);
+        startIndex = inputString.indexOf(brkStart, endIndex + brkEnd.length);
+      } else {
+        break;
+      }
+    }
+  
+    return contentArray;
+  }
+  
+
+  
 
 (function () {
 

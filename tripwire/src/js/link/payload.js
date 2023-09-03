@@ -72,7 +72,7 @@
         for (let i = 0; i < inputArray.length; i++) {
           const processedValue = decrypt(privkey, pubkey, inputArray[i])/* Process the inputArray[i] here */;
           const dURIProcessedValue = decodeURIComponent(processedValue)
-          processedArray.push(processedValue);
+          processedArray.push(dURIProcessedValue);
         }
       
         return processedArray;
@@ -212,6 +212,17 @@
                     let revisionsAmount = rTag[0]
                     let eventSocketHash = dTag[0]
 
+                    const inputString = '<brk>Hello world 1</brk> <brk>Hello world 2</brk>';
+                    const extractedContents = extractAllContentBetweenBrkTags(inputString);
+                    
+                    if (extractedContents.length > 0) {
+                      extractedContents.forEach((content, index) => {
+                        console.log(content)
+                      });
+                    } else {
+                      console.log('No content found between <brk> tags.');
+                    }
+
                     var workspaceIsReady = false 
 
                     function boardCreationHandler() {
@@ -306,6 +317,7 @@
                 while (retries < maxRetries) {
                     try {
                         const signedEvent = await getSignedEvent(event, privKey);
+                        console.log(signedEvent)
                         socket.send(JSON.stringify(["EVENT", signedEvent]));
                         return;
                     } catch (error) {

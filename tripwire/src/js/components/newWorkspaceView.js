@@ -7,7 +7,6 @@ var newworkspaceform = `
 
             <div class="display-flex flex-col">
                 <div class="full-center flex-col">
-                    <h1 style="transform: rotate(120deg) translate(-100px, -100px);" class="flow font-max absolute">🪐</h1>
                     <h4 id='workspaceModalIndicator'class="color-primary">Let's start with a Workspace</h4>    
                 </div>
             </div>

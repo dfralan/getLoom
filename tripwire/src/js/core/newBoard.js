@@ -81,6 +81,7 @@ function launchModalBoard(boardId) {
 newBoardForm.addEventListener('submit', function (event) {
     event.preventDefault()
 
+    
     const newBoardName = newBoardNameInput.value
     const newBoardDescription = newBoardInputDescription.value
     const newBoardTags = newBoardInputTags.value
