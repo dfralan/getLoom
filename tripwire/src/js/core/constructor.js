@@ -263,9 +263,9 @@ function constructBoard(BoardHash) {
 
         // Add access button to toolbar
         const toolbarAccessButton = document.createElement('button');
-        toolbarAccessButton.className = "border-solid border-secondary bg-body display-flex rounded bg-lighter color-secondary border-none full-center font-400 font-s s-padded-wide no-wrap";
+        toolbarAccessButton.className = "bg-tertiary display-flex rounded bg-lighter color-primary border-none full-center font-400 font-s s-padded-wide no-wrap";
         toolbarAccessButton.id = `accessBtn-${boardId}`
-        toolbarAccessButton.style.opacity = '0.5'
+        toolbarAccessButton.style.opacity = '0.3'
         toolbarAccessButton.innerHTML = title;
         toolbarAccessButton.onclick = function() {
             toggleBoardVisibility(boardId, `accessBtn-${boardId}`);
