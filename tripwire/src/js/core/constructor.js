@@ -216,8 +216,8 @@ function constructBoard(BoardHash) {
 
 
     var easyBoard = `
-    <div class="rounded bg-body display-flex flex-col border-solid border-secondary transition-300">
-        <div class="bg-tertiary display-flex rounded-up border-solid border-secondary border-top-none border-left-none border-right-none full-center spaced color-primary font-400 font-m s-padded">
+    <div class="rounded bg-body shadow-one display-flex flex-col transition-300">
+        <div class="display-flex full-center spaced color-primary font-400 font-m s-padded">
             <div class='hide-scrollbar overflow-scroll max-width-100'><span class="boardTitle no-wrap">${title}</span></div>
             <div id='dropdown-${boardId}' class="dropdown">
                 <button onclick="toggleDropdown('dropdown-${boardId}')" class="hover-bg-lighter rounded-max btn cursor-pointer hover-fill-primary fill-secondary">
