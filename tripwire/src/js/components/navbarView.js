@@ -26,7 +26,7 @@ var navbar =`
 
             <input style='padding-right: 30px !important'
                 class="responsive-1 s-padded-wide bg-body rounded-s border-solid border-secondary shadow-dynamic placeholder-secondary font-s font-300 color-primary"
-                type="text" id="filterInput" placeholder="Filter">
+                type="text" id="boardFilter" placeholder="Filter">
         </div>
 
         <!-- Avatar Dropdown -->
