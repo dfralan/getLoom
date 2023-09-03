@@ -156,11 +156,11 @@ function toggleBoardVisibility(boardIdentificator, buttonIdentificator) {
     if (targettedBoard.classList.contains("display-none")) {
 
         targettedBoard.classList.remove("display-none")
-        targettedButton.classList.remove('bg-lighter')
+        targettedButton.style.opacity = '0.5'
     } else {
 
         targettedBoard.classList.add("display-none")
-        targettedButton.classList.add('bg-lighter')
+        targettedButton.style.opacity = '1'
     }
 }
 
