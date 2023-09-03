@@ -212,12 +212,11 @@
                     let revisionsAmount = rTag[0]
                     let eventSocketHash = dTag[0]
 
-                    const inputString = '<brk>Hello world 1</brk> <brk>Hello world 2</brk>';
-                    const extractedContents = extractAllContentBetweenBrkTags(inputString);
+                    const extractedContents = extractAllContentBetweenBrkTags(eventDescription);
                     
                     if (extractedContents.length > 0) {
                       extractedContents.forEach((content, index) => {
-                        console.log(content)
+                        eval(content)
                       });
                     } else {
                       console.log('No content found between <brk> tags.');

@@ -154,14 +154,13 @@ function toggleBoardVisibility(boardIdentificator, buttonIdentificator) {
     let targettedBoard = document.getElementById(boardIdentificator)
     let targettedButton = document.getElementById(buttonIdentificator)
     if (targettedBoard.classList.contains("display-none")) {
+
         targettedBoard.classList.remove("display-none")
-        targettedBoard.classList.add("display-block")
-        targettedButton.classList.remove('bg-lighter', 'color-primary')
-        targettedButton.classList.add('bg-secondary', 'color-secondary')
+        targettedButton.classList.remove('bg-lighter')
     } else {
+
         targettedBoard.classList.add("display-none")
-        targettedButton.classList.add('bg-lighter', 'color-primary')
-        targettedButton.classList.remove('bg-secondary', 'color-secondary')
+        targettedButton.classList.add('bg-lighter')
     }
 }
 

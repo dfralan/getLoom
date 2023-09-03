@@ -242,8 +242,7 @@ function constructBoard(BoardHash) {
     if (document.querySelector(`[data-event-hash="${boardEventHash}"]`)){
 
         const targettedBoard = document.getElementById(BoardHash)
-
-        const existentAccessButton = targettedWorkspace.querySelector(`#${BoardHash}`)
+        const existentAccessButton = targettedWorkspace.querySelector(`#accessBtn-${BoardHash}`)
         existentAccessButton.innerHTML = title;
 
         const existentBoardTitle = targettedBoard.querySelector(`.boardTitle`)
@@ -451,6 +450,7 @@ function constructSheet(sheetHash) {
         newSheetLi.innerHTML = easySheet
 
         // Find the .boardContainer element within the specified board element
+        console.log(boardId)
         var targettedBoard = document.getElementById(boardId);
         var targettedBoardContainer = targettedBoard.querySelector('.sheetContainer');
         
