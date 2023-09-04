@@ -151,7 +151,7 @@
                         bHash.push(tagValue);
                     } else if (tagType === 'sHash') {
                         sHash.push(tagValue);
-                    } else if (tagType === 'title') {
+                    } else if ((tagType === 'title') || (tagType === 'sTitle')) {
                         title.push(tagValue);
                     } else if (tagType === 'ddLine') {
                         ddLine.push(tagValue);
@@ -161,6 +161,9 @@
                         rTag.push(tagValue);
                     }
                 }
+
+
+                document.dispatchEvent(new Event(dTag[0]));
 
                 // Private board event handler
                 if (kind === privateWorkspaceKindNumber) {
@@ -258,8 +261,6 @@
                     let eventParticipants = event.pubkey
                     let revisionsAmount = rTag[0]
                     let eventSocketHash = dTag[0]
-
-                    document.dispatchEvent(new Event(eventSocketHash));
 
                     function sheetCreationHandler() {
                         const newSheetDecryptedArrayed = [eventWorkspaceHash, eventBoardId, eventSheetId, eventTitle, eventDescription, eventTagsArray, eventDeadline, eventTimeCreation, eventParticipants, revisionsAmount, eventSocketHash];
@@ -374,7 +375,7 @@
                 sendEventWithRetry(privateWorkspace);
 
                 document.addEventListener(eventSocketHashAgain, function (event) {
-                    window.dispatchEvent(new Event("closeNewWorkspaceModal"));
+                    hideNewWorkspaceModal()
                     localStorage.removeItem("newWorkspaceLS");
                     ephemeralNotification("Workspace created successfully.");
                     document.removeEventListener("newWorkspaceEvent", handleNewWorkspaceEvent);
@@ -422,7 +423,7 @@
                 sendEventWithRetry(privateBoard);
 
                 document.addEventListener(eventSocketHashAgain, function (event) {
-                    window.dispatchEvent(new Event("closeNewBoardModal"));
+                    hideNewBoardModal()
                     localStorage.removeItem("newBoardLS");
                     ephemeralNotification("Board created successfully.");
                     document.removeEventListener("newBoardEvent", handleNewBoardEvent);
@@ -475,14 +476,14 @@
                 currentRetry = 0;
                 sendEventWithRetry(privateSheet);
                 document.addEventListener(eventSocketHashAgain, function (event) {
-                    window.dispatchEvent(new Event("closeNewSheetModal"));
+                    hideNewSheetModal()
                     localStorage.removeItem("newSheetLS");
                     ephemeralNotification("Sheet created successfully.");
                     document.removeEventListener("newSheetEvent", handleNewSheetEvent);
                 });
             };
             // Listen for the local event of creating a new SHEET that triggers the event composition and sending
-            window.addEventListener("newBoardEvent", handleNewSheetEvent);
+            window.addEventListener("newSheetEvent", handleNewSheetEvent);
 
 
             // Handle WebSocket connection open event

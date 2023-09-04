@@ -30,12 +30,6 @@ function hideNewBoardModal() {
     boardCreationModal.classList.add("display-none");
 }
 
-// listen event that allow close new sheet modal when success on sending the event
-//0 workspaceId, 1 boardId, 2 title, 3 description, 4 tags, 5 deadline, 6 at, 7 participants, 8 revisions
-window.addEventListener("closeNewBoardModal", function() {
-    hideNewBoardModal()
-});
-
 // Launch Modal and fullfill inputs needed
 function launchModalBoard(boardId) {
 

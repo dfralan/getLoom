@@ -17,13 +17,6 @@ var sidebar = `
         <h4 class="font-s font-600 color-secondary rounded-s">Workspaces</h4>
         <button onclick="launchModalWorkspace('')" class="border-none bg-tint color-white full-center text-center display-flex flex-row font-s font-500 s-padded-wide rounded no-wrap cursor-pointer">+ Add new</button>
     </div>
-
-    <!--  <div class="display-flex flex-row h-center flex-end fill-secondary relative">
-        <span class='z-1 full-center absolute xs-padded end-0'>
-            ${filterIcon}
-        </span>
-        <input style='padding-right: 30px !important' class="responsive-1 s-padded-wide bg-body rounded-s border-solid border-secondary shadow-dynamic placeholder-secondary font-s font-300 color-primary" type="text" id="filterInput" placeholder="Filter">
-    </div> -->
     
     <div class="sidebarContent w-100 display-flex flex-col s-gap">
     </div>

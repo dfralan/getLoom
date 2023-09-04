@@ -2,10 +2,10 @@ let loomDropdownId = genHex(12);
 let navUserDropdownId = genHex(12);
 
 var navbar =`
-<div class="bg-body stick-top z-3 s-padded no-padded-bottom spaced display-flex flex-row full-center s-gap">
+<div class="bg-body stick-top z-3 s-padded spaced display-flex flex-row full-center s-gap">
     <div class="display-flex flex-row s-gap full-center s-padded no-padded-bottom no-padded-top">
         <!-- Left Sidebar -->
-        <p onclick="showSideBar()" class='display-flex cursor-pointer hover-bg-lighter full-center border-solid border-secondary xs-padded rounded-s color-primary fill-primary'>
+        <p onclick="showSideBar()" class='hover-bg-lighter btn cursor-pointer hover-fill-primary fill-secondary xs-padded rounded-s'>
             ${menuIcon}
         </p>
 
@@ -19,13 +19,13 @@ var navbar =`
 
     <div class="display-flex flex-row s-gap flex-end h-center s-padded no-padded-bottom no-padded-top">
 
-        <div class="display-flex flex-row h-center flex-end fill-secondary relative">
+        <div class="hover-fill-primary display-flex flex-row h-center flex-end fill-secondary relative">
             <span class='z-1 full-center absolute xs-padded end-0'>
                 ${filterIcon}
             </span>
 
             <input style='padding-right: 30px !important'
-                class="responsive-1 s-padded-wide bg-body rounded-s border-solid border-secondary shadow-dynamic placeholder-secondary font-s font-300 color-primary"
+                class="responsive-1 s-padded-wide bg-tertiary border-none rounded-s placeholder-secondary font-s font-300 color-primary"
                 type="text" id="boardFilter" placeholder="Filter">
         </div>
 
