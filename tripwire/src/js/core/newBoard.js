@@ -80,8 +80,6 @@ function launchModalBoard(boardId) {
 // Submit board new listener
 newBoardForm.addEventListener('submit', function (event) {
     event.preventDefault()
-
-    
     const newBoardName = newBoardNameInput.value
     const newBoardDescription = newBoardInputDescription.value
     const newBoardTags = newBoardInputTags.value
@@ -91,8 +89,8 @@ newBoardForm.addEventListener('submit', function (event) {
     //const selectedTime = timePickerDD.value;
     //const combinedDateTime = new Date(`${selectedDate}T${selectedTime}`);
     //const boardDeadline = combinedDateTime.getTime();
-
     //0 workspaceId, 1 boardId, 2 title, 3 tags, 4 deadline, 5 at, 6 participants
+    
     const newBoardArrayed = [
         workspaceHash,
         newBoardHash,

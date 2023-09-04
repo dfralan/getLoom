@@ -3,7 +3,7 @@ let trashDropdownId = genHex(12);
 var boardcontainer = `
         <section class="boardsContainer m-gap bg-tertiary padded overflow-scroll hide-scrollbar display-flex flex-row min-height-50">
 
-            <div id='createBoardButton' class='display-none'>
+            <div>
                 <button onclick="launchModalBoard('')" class="bg-tint color-white full-center text-center display-flex flex-row font-m font-500 s-padded-wide border-solid border-tertiary fill-white rounded no-wrap cursor-pointer border-none">
                     <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28">
                         <path

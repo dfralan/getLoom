@@ -78,7 +78,7 @@ const isValidPhoneNumber = (phoneNumber = '') => {
 };
 
 // Convert tags from forms to Array like: 'naranja, banana' => ['naranja','banana']
-function arrayTags(x) {
+const arrayTags = (x = '') => {
     const values = x.split(', ');
     const output = values.map(value => `"${encodeURIComponent(value)}"`);
     const arrayedTags = `[${output.join(', ')}]`;
@@ -87,6 +87,8 @@ function arrayTags(x) {
 
 // Convert 
 function arrayToCommaString(inputArray) {
+    console.log('inputArray')
+    console.log(inputArray)
     var decodedArray = inputArray.map(item => decodeURIComponent(item));
     var result = decodedArray.join(', ');
     return result;

@@ -223,9 +223,9 @@ function constructBoard(BoardHash) {
                 <button onclick="toggleDropdown('dropdown-${boardId}')" class="hover-bg-lighter rounded-max btn cursor-pointer hover-fill-primary fill-secondary">
                     ${dotOptionsIcon}
                 </button>
-                <ul class="dropdown-content to-right z-1 absolute text-right rounded shadow-two bg-body xs-padded border-solid-s border-primary">
-                    <li onclick="launchModalSheet('${boardId}', '')" class="dropdown-element block-mode color-secondary rounded-xs cursor-pointer" data-parent-id="${boardId}">Add new sheet +</li>
-                    <li onclick="launchModalBoard('${boardId}')" class="dropdown-element block-mode color-secondary rounded-xs cursor-pointer" data-parent-id="${boardId}">Edit Board</li>
+                <ul class="dropdown-content to-right z-1 absolute text-right rounded shadow-two bg-tertiary xs-padded">
+                    <li onclick="launchModalSheet('${boardId}', '')" class="dropdown-element block-mode color-primary rounded-xs cursor-pointer" data-parent-id="${boardId}">Add new sheet +</li>
+                    <li onclick="launchModalBoard('${boardId}')" class="dropdown-element block-mode color-primary rounded-xs cursor-pointer" data-parent-id="${boardId}">Edit Board</li>
                 </ul>
             </div>
         </div>
@@ -255,7 +255,7 @@ function constructBoard(BoardHash) {
 
         // Create the outermost div with class "responsive-4"
         const newBoardDiv = document.createElement("div")
-        newBoardDiv.className = "max-w-350 display-block matchMeMan border-dashed boardDropZone rounded"
+        newBoardDiv.className = "transition-smooth max-w-350 display-block matchMeMan border-dashed boardDropZone rounded"
         newBoardDiv.id = boardId
         newBoardDiv.setAttribute('data-event-hash', boardEventHash)
         newBoardDiv.innerHTML = easyBoard
@@ -427,7 +427,7 @@ function constructSheet(sheetHash) {
     `
 
     const eventHash = document.querySelector(`[data-event-hash="${hashEventHash}"]`)
-    const sheetClass = `tripSheet matchMeManChild show-my-child cursor-pointer bg-tertiary shadow-dynamic color-primary display-flex flex-col rounded-s s-gap border-solid border-secondary`
+    const sheetClass = `tripSheet matchMeManChild show-my-child cursor-pointer bg-tertiary shadow-dynamic color-primary display-flex flex-col rounded-s s-gap`
     
     // Check if is an update, or an older than the actual one with same ID,
     if (eventHash){

@@ -44,9 +44,8 @@ var newworkspaceform = `
             </p>
 
             <div class="flex-col display-flex s-gap">
-                <button id='newWorkspaceSubmitButton' class="border-none cursor-pointer color-white font-m bg-tint rounded-s s-padded border-none" type="submit">Start</button>
-                <button id="cancelNewWorkspaceModal" onclick="hideNewWorkspaceModal()" class="border-none cursor-pointer color-body font-m bg-primary rounded-s s-padded border-none" type="button">Cancel</button>
-                <button id="goBackNewWorkspaceModal" onclick="showNewDashboardModal()" class="border-none cursor-pointer color-body font-m bg-primary rounded-s s-padded border-none" type="button">Go back</button>
+                <button class="border-none cursor-pointer color-white font-m bg-tint rounded-s s-padded border-none" type="submit">Create</button>
+                <button onclick=" hideNewWorkspaceModal()" class="border-none cursor-pointer color-body font-m bg-primary rounded-s s-padded border-none" type="button">Cancel</button>
             </div>
         </form>
         

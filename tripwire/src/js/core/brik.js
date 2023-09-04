@@ -180,7 +180,7 @@ html {
 }
 
 .transition-smooth {
-    transition: .25s;
+    transition: .2s;
 }
 
 .shadow-one {
