@@ -25,38 +25,17 @@ var navbar =`
             </span>
 
             <input style='padding-right: 30px !important'
-                class="responsive-1 s-padded-wide bg-tertiary border-none rounded-s placeholder-secondary font-s font-300 color-primary"
+                class="responsive-1 s-padded-wide bg-tertiary border-none rounded-s placeholder-secondary font-m color-primary"
                 type="text" id="boardFilter" placeholder="Filter">
         </div>
 
         <!-- Avatar Dropdown -->
-        <div id='${navUserDropdownId}' class="dropdown">
-            <!-- Dropdown button -->
-            <div onclick="toggleDropdown('${navUserDropdownId}')" class="btn display-flex cursor-pointer">
-                <span class='avatar-m shadow-dynamic bg-primary'></span>
-            </div>
-            <!-- Dropdown content -->
-            <ul style='min-width: 200px'
-                class="dropdown-content to-right z-1 absolute text-right rounded shadow-two bg-body xs-padded border-solid-s border-primary">
-                <li class="text-center font-xs font-500 dropdown-element inactive block-mode color-secondary">Theme</li>
-                <li id="theme-btn" class="dropdown-element btn">
-                    <span>${sunIcon}${moonIcon}</span>
-                </li>
-                <div class="text-center color-grey block-mode divider"></div>
-                <li class="text-center font-xs font-500 dropdown-element inactive block-mode color-secondary">Workspaces
-                </li>
-                <li onclick="toggleSideBar()" class="text-center font-xs font-300 dropdown-element block-mode color-primary cursor-pointer">Sales
-                    Approach</li>
-                <div class="text-center color-grey block-mode divider"></div>
-                <li onclick="logout()"
-                    class="text-right flex-center font-xs font-300 dropdown-element block-mode rounded-xs cursor-pointer full-center color-primary fill-primary">
-                    Logout
-                    ${doorIcon}
-                </li>
-            </ul>
+        <!-- Dropdown button -->
+        <div onclick='toggleCoordinatorModal()' class="btn display-flex cursor-pointer">
+            <span class='avatar-m shadow-dynamic bg-primary'></span>
         </div>
     </div>
-    <!-- Missing closing div for the first "bg-body" div -->
+    
 </div>
 
 

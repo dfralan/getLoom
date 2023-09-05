@@ -223,9 +223,9 @@ function constructBoard(BoardHash) {
                 <button onclick="toggleDropdown('dropdown-${boardId}')" class="hover-bg-lighter rounded-max btn cursor-pointer hover-fill-primary fill-secondary">
                     ${dotOptionsIcon}
                 </button>
-                <ul class="dropdown-content to-right z-1 absolute text-right rounded shadow-two bg-tertiary xs-padded">
-                    <li onclick="launchModalSheet('${boardId}', '')" class="dropdown-element block-mode color-primary rounded-xs cursor-pointer" data-parent-id="${boardId}">Add new sheet +</li>
-                    <li onclick="launchModalBoard('${boardId}')" class="dropdown-element block-mode color-primary rounded-xs cursor-pointer" data-parent-id="${boardId}">Edit Board</li>
+                <ul class="dropdown-content to-right z-1 absolute text-right rounded shadow-two bg-body s-padded btn">
+                    <li onclick="launchModalSheet('${boardId}', '')" data-parent-id="${boardId}" class="${dropdownElementClass}">Add new sheet +</li>
+                    <li onclick="launchModalBoard('${boardId}')" data-parent-id="${boardId}" class="${dropdownElementClass}">Edit Board</li>
                 </ul>
             </div>
         </div>
@@ -408,9 +408,8 @@ function constructSheet(sheetHash) {
                 <button onclick="toggleDropdown('dropdown-${sheetId}')" class="hover-bg-lighter rounded-max btn cursor-pointer hover-fill-primary fill-secondary">
                 ${dotOptionsIcon}
                 </button>
-                <ul class="dropdown-content to-right z-1 absolute text-right rounded shadow-two bg-body xs-padded border-solid-s border-primary">
-                    <li onclick="launchModalSheet('${boardId}', '${sheetId}')" class="dropdown-element block-mode color-secondary rounded-xs cursor-pointer" data-parent-id="${sheetId}">Edit Sheet</li>
-                    <li class="dropdown-element block-mode color-secondary rounded-xs cursor-pointer" data-parent-id="${sheetId}">Delete Sheet</li>
+                <ul class="dropdown-content to-right z-1 absolute text-right rounded shadow-two bg-body s-padded btn">
+                    <li class="${dropdownElementClass}" data-parent-id="${sheetId}" onclick="launchModalSheet('${boardId}', '${sheetId}')">Edit Sheet</li>
                 </ul>
             </div>
         </div>

@@ -208,7 +208,7 @@ html {
 }
 
 .shadow-two {
-    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 15px 5px rgba(var(--black-color-rgb), var(--shadow-opacity));
 }
 
 .overflow-hidden {
@@ -1120,6 +1120,7 @@ html {
 .dropdown-element:active {
     background-color: var(--tint-color) !important;
     color: var(--white-color) !important;
+    fill: var(--white-color) !important;
 }
 
 .inactive {

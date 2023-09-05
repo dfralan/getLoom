@@ -1,17 +1,14 @@
 (function () {
 
     // Define constants for different kinds of private data
+    const relay = "wss://relayable.org";
+    var privKey = ''
+    var pubKey = ''
     const privateDMKindNumber = 4
     const privateSheetKindNumber = 30003
+    const coordinatorKindNumber = 10001
     const privateBoardKindNumber = 30002
     const privateWorkspaceKindNumber = 30001
-
-    // Check if the device is online before proceeding
-    if (!navigator.onLine) {
-        localStorage.removeItem("privKey");
-        window.location.href = 'index.html';
-        return;
-    }
 
     // Define elliptic curve and cryptographic functions
     const ec = new elliptic.ec('secp256k1');// Instantiate the secp256k1 elliptic curve (the one used in Bitcoin)
@@ -90,7 +87,6 @@
 
     generateKeypair()
 
-
     // Generate public key from private key
     function generatePublicKey(privateKeyHex) {
         const keyPair = ec.keyFromPrivate(privateKeyHex, 'hex');
@@ -100,13 +96,24 @@
         return shortHexKey;
     }
 
+      // Check if the device is online before proceeding
+      if (!navigator.onLine) {
+        localStorage.removeItem("privKey");
+        window.location.href = 'index.html';
+        return;
+        } else {
+            let pk = localStorage.getItem("privKey");
+            let pbk = generatePublicKey(pk)
+            localStorage.setItem('pubKey', pbk)
+            let event = new Event('pubKeySetted')
+            document.dispatchEvent(event);
+        }
+
     // Set up WebSocket connection and handle data communication
     function setupWebSocketConnection() {
 
-        // Define relay server and fetch private key from local storage
-        const relay = "wss://relayable.org";
-        const privKey = localStorage.getItem("privKey")
-        const pubKey = generatePublicKey(privKey);
+        privKey = localStorage.getItem("privKey")
+        pubKey = generatePublicKey(privKey);
 
         // Subscribe to own key for data updates
         var subId = bitcoinjs.ECPair.makeRandom().privateKey.toString("hex")

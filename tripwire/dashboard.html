@@ -33,6 +33,10 @@
     <brik navbar></brik>
     <script src="src/js/components/navbarView.js"></script>
 
+    <!-- Coordinator -->
+    <brik coordinator></brik>
+    <script src="src/js/components/coordinatorView.js"></script>
+
     <div id='workspace' data-workspace-hash=''>
 
         <!-- Toolbar -->
@@ -60,10 +64,6 @@
         </div>
 
     </div>
-
-    <div id="newDashboardModal" class="modal z-i full-center blur-behind smooth-300 display-flex flex-col s-gap display-none">
-        <p class='color-primary padded'>🫠 We are carrying out maintenance tasks, we will notify you when the service is available again.</p>
-    </div>
     
     <!-- New workspace modal -->
     <brik newworkspaceform></brik>
@@ -79,11 +79,12 @@
     <script src="src/js/i18n/loom.js"></script>
     <script src="src/js/core/app.js"></script>
     <script src="src/js/core/ephemeralNotifications.js"></script>
-    <script src="src/js/link/payload.js"></script>
     <script src="src/js/link/connectionStatus.js"></script>
     <script src="src/js/core/newBoard.js"></script>
     <script src="src/js/core/newSheet.js"></script>
     <script src="src/js/core/newWorkspace.js"></script>
+    <script src="src/js/core/coordinator.js"></script>
+    <script src="src/js/link/payload.js"></script>
     <script src="src/js/core/filter.js"></script>
 
 </body>
