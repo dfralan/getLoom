@@ -21,12 +21,10 @@ var boardEventHash = ''
 // show add new board modal
 function showNewBoardModal() {
     boardCreationModal.classList.remove("display-none");
-    boardCreationModal.classList.add("display-flex");
 }
 
 // hide add new board modal
 function hideNewBoardModal() {
-    boardCreationModal.classList.remove("display-flex");
     boardCreationModal.classList.add("display-none");
 }
 

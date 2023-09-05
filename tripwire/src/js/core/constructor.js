@@ -204,7 +204,6 @@ function constructBoard(BoardHash) {
    
     var boardBody = `
             ${iframeConstructor}
-            <ul class="sheetContainer hide-scrollbar display-flex flex-col s-gap overflow-scroll s-padded" style="max-height: 300px;"></ul>
             <p class='boardDescription s-padded ${description == '' ? 'display-none' : ''} font-s color-primary'>${replaceUrlsWithLinks(description)}</p>
             <div class="boardTagsContainer display-flex flex-wrap s-gap s-padded">
                 ${boardTags}
@@ -229,6 +228,8 @@ function constructBoard(BoardHash) {
                 </ul>
             </div>
         </div>
+
+        <ul class="sheetContainer hide-scrollbar display-flex flex-col s-gap overflow-scroll s-padded" style="max-height: 300px;"></ul>
         <div class='display-flex flex-col boardBody'>
             ${boardBody}
         </div>

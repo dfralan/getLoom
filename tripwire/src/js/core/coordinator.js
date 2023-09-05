@@ -1,5 +1,6 @@
 // Variables to handle sheet creation
 const coordinatorModal = document.getElementById('coordinatorModal')
+const confirmationLogoutModal = document.getElementById('confirmationLogoutModal')
 const coordinatorPubkey = document.getElementById('coordinatorPubkey')
 
 document.addEventListener('pubKeySetted', function () {
@@ -35,6 +36,16 @@ function toggleCoordinatorModal() {
         coordinatorModal.classList.remove("display-none");
     } else {
         coordinatorModal.classList.add("display-none");
+    }
+    
+}
+
+// show add new board modal
+function toggleConfirmationLogoutModal() {
+    if (confirmationLogoutModal.classList.contains("display-none")){
+        confirmationLogoutModal.classList.remove("display-none");
+    } else {
+        confirmationLogoutModal.classList.add("display-none");
     }
     
 }
