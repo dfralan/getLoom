@@ -120,52 +120,63 @@
       </ul>
     </div>
 
-    <!-- Header -->
-    <nav class="fixed-top bg-body navbar d-flex align-items-center navbar-expand-md px-4">
-      <div class="container-fluid p-0">
 
-        <!-- Logo -->
-        <a class="navbar-brand d-flex fs-4" href="#">
-          <div class="text-end">LOOM
-            <div class="fw-light" style="font-size: x-small; margin-top: -0.5rem;" loom="by Teller">
+    <div class="fixed-top">
+      <div id="daily-call-container" class="bg-warning text-black navbar d-flex align-items-center navbar-expand-md px-4 z-3">
+        <div id="daily-call" class="container-fluid p-0 fs-6 fw-light text-center justify-content-center">
+          <span class="" loom="¡Comuníquese ahora al +543412293515 y obtenga nuestra herramienta de traducción de software a solo $0.15 USD por palabra!"></span>
+          <span class="d-none" loom="Integración sin costo hoy, solo $0.15 USD por palabra en traducción de software."></span>
+        </div>
+        <button id="daily-call-close-button" type="button" class="btn-close" aria-label="Close"></button>
+      </div>
+      <!-- Header -->
+      <nav class="bg-body navbar d-flex align-items-center navbar-expand-md px-4">
+        <div class="container-fluid p-0">
+
+          <!-- Logo -->
+          <a class="navbar-brand d-flex fs-4" href="#">
+            <div class="text-end">LOOM
+              <div class="fw-light" style="font-size: x-small; margin-top: -0.5rem;" loom="by Teller">
+              </div>
+            </div>
+          </a>
+
+          <!-- Loom language switcher -->
+          <loom class="nav-link dropdown align-items-center d-flex" flag="rounded">
+
+            <a class="nav-link dropdown-toggle btn btn-secondary p-1 align-items-center" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" loom-indicator>
+            </a>
+            <ul class="dropdown-menu" loom-list>
+              <li role="button" class="dropdown-item" loom-language="us"></li>
+              <li role="button" class="dropdown-item" loom-language="ar"></li>
+              <li role="button" class="dropdown-item" loom-language="mx"></li>
+              <li role="button" class="dropdown-item" loom-language="es"></li>
+              <li role="button" class="dropdown-item" loom-language="br"></li>
+              <li role="button" class="dropdown-item" loom-language="de"></li>
+              <li role="button" class="dropdown-item" loom-language="fr"></li>
+              <li role="button" class="dropdown-item" loom-language="it"></li>
+              <li role="button" class="dropdown-item" loom-language="gb"></li>
+            </ul>
+
+            <!-- Collapse header button -->
+            <a id="navbar-toggler-icon" class="navbar-toggler bi bi-plus fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"></a>
+            
+          </loom>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav gap-3 align-items-center">
+              <a class="nav-link px-0" href="#" loom="Home"></a>
+              <a class="nav-link px-0" href="https://github.com/dfralan/loom" loom="Developers" target="_blank"></a>
+              <a id="navBarTellerLaunch" class="nav-link px-0" loom="Need Help?" role="button" ></a>
+              <a class="nav-link btn px-3 bg-body-inverted text-body-emphasis-inverted" loom="Ask for Quote" href="#QUOTE"></a>
             </div>
           </div>
-        </a>
 
-        <!-- Loom language switcher -->
-        <loom class="nav-link dropdown align-items-center d-flex" flag="rounded">
-
-          <a class="nav-link dropdown-toggle btn btn-secondary p-1 align-items-center" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false" loom-indicator>
-          </a>
-          <ul class="dropdown-menu" loom-list>
-            <li role="button" class="dropdown-item" loom-language="us"></li>
-            <li role="button" class="dropdown-item" loom-language="ar"></li>
-            <li role="button" class="dropdown-item" loom-language="mx"></li>
-            <li role="button" class="dropdown-item" loom-language="es"></li>
-            <li role="button" class="dropdown-item" loom-language="br"></li>
-            <li role="button" class="dropdown-item" loom-language="de"></li>
-            <li role="button" class="dropdown-item" loom-language="fr"></li>
-            <li role="button" class="dropdown-item" loom-language="it"></li>
-            <li role="button" class="dropdown-item" loom-language="gb"></li>
-          </ul>
-
-          <!-- Collapse header button -->
-          <a id="navbar-toggler-icon" class="navbar-toggler bi bi-plus fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"></a>
-          
-        </loom>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav gap-3 align-items-center">
-            <a class="nav-link px-0" href="#" loom="Home"></a>
-            <a class="nav-link px-0" href="https://github.com/dfralan/loom" loom="Developers" target="_blank"></a>
-            <a id="navBarTellerLaunch" class="nav-link px-0" loom="Need Help?" role="button" ></a>
-            <a class="nav-link btn px-3 bg-body-inverted text-body-emphasis-inverted" loom="Ask for Quote" href="#QUOTE"></a>
-          </div>
         </div>
+      </nav>
 
-      </div>
-    </nav>
+    </div>
 
     <!-- Exit attempt modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
