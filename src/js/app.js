@@ -130,7 +130,31 @@
 
       });
     }
-    
+
+    // Get the spans
+    const spans = document.querySelectorAll('#frase span');
+  
+    // Function to toggle the "d-none" class
+    function toggleClass() {
+      spans.forEach((span) => {
+        if (span.classList.contains('d-none')) {
+          span.classList.remove('d-none');
+        } else {
+          span.classList.add('d-none');
+        }
+      });
+    }
+  
+    // Set an interval to toggle the class every 5 seconds
+    setInterval(toggleClass, 5000);
+  
+    let dailyCallContainer = document.getElementById('daily-call-container')
+    let dailyCallCloseButton = document.getElementById('daily-call-close-button')
+  
+    dailyCallCloseButton.addEventListener("click", function (event) {
+      dailyCallContainer.remove()
+  
+    })
 
     // Hide widgets when scrolling
     let didScroll = false;
