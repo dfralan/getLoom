@@ -324,15 +324,15 @@ const loomTranslations = {
         "it": "“Scopri il valore immenso di connetterti con i tuoi utenti nella loro lingua madre. La nostra soluzione, alimentata da JavaScript puro e facilmente integrabile tramite un semplice CDN, ti permette di superare le barriere linguistiche e favorire una comunicazione significativa.”",
         "de": "Erleben Sie den immensen Wert der Verbindung mit Ihren Benutzern in ihrer Muttersprache. Unsere Lösung, betrieben von reinem JavaScript und leicht über ein einfaches CDN integrierbar, ermöglicht es Ihnen, Sprachbarrieren zu überwinden und eine bedeutungsvolle Kommunikation zu fördern."
     },
-    "Alan Dufour, creator of loom.js": {
-        "us": "Alan Dufour, creator of loom.js",
-        "ar": "Alan Dufour, creador de loom.js",
-        "mx": "Alan Dufour, creador de loom.js",
-        "es": "Alan Dufour, creador de loom.js",
-        "br": "Alan Dufour, criador do loom.js",
-        "fr": "Alan Dufour, créateur de loom.js",
-        "it": "Alan Dufour, creatore di loom.js",
-        "de": "Alan Dufour, Schöpfer von loom.js"
+    "Alan Dufour, CTO of Loom SS": {
+        "us": "Alan Dufour, CTO of Loom SS",
+        "ar": "Alan Dufour, CTO de Loom SS",
+        "mx": "Alan Dufour, CTO de Loom SS",
+        "es": "Alan Dufour, CTO de Loom SS",
+        "br": "Alan Dufour, CTO da Loom SS",
+        "fr": "Alan Dufour, CTO de Loom SS",
+        "it": "Alan Dufour, CTO di Loom SS",
+        "de": "Alan Dufour, CTO von Loom SS"
     },
     "Start easily": {
         "us": "Start easily",
@@ -403,6 +403,36 @@ const loomTranslations = {
         "fr": "Demandez un devis en remplissant ce formulaire.",
         "it": "Richiedi un preventivo compilando questo modulo.",
         "de": "Fordern Sie ein Angebot an, indem Sie dieses Formular ausfüllen."
+    },
+    "Request a quote.": {
+        "us": "Request a quote.",
+        "ar": "Solicite una cotización.",
+        "mx": "Solicite una cotización.",
+        "es": "Solicite una cotización.",
+        "br": "Solicite um orçamento.",
+        "fr": "Demandez un devis.",
+        "it": "Richiedi un preventivo.",
+        "de": "Angebot anfordern."
+    },
+    "Contact us now at +543412293515 and get our software translation tool for only $0.15 USD per word!": {
+        "us": "Contact us now at +543412293515 and get our software translation tool for only $0.15 USD per word!",
+        "ar": "¡Comuníquese ahora al +543412293515 y obtenga nuestra herramienta de traducción de software a solo $0.15 USD por palabra!",
+        "mx": "¡Comuníquese ahora al +543412293515 y obtenga nuestra herramienta de traducción de software a solo $0.15 USD por palabra!",
+        "es": "¡Comuníquese ahora al +543412293515 y obtenga nuestra herramienta de traducción de software a solo $0.15 USD por palabra!",
+        "br": "Entre em contato agora pelo +543412293515 e adquira nossa ferramenta de tradução de software por apenas $0,15 USD por palavra!",
+        "fr": "Appelez maintenant au +543412293515 et obtenez notre outil de traduction de logiciel pour seulement 0,15 USD par mot!",
+        "it": "Chiamate ora il +543412293515 e ottenete il nostro strumento di traduzione del software a soli $0.15 USD per parola!",
+        "de": "Kontaktieren Sie uns jetzt unter +543412293515 und erhalten Sie unser Übersetzungssoftware-Tool für nur 0,15 USD pro Wort!"
+    },
+    "Complete this form and we will contact you shortly.": {
+        "us": "Complete this form and we will contact you shortly.",
+        "ar": "Complete este formulario y nos pondremos en contacto con usted a la brevedad.",
+        "mx": "Complete este formulario y nos pondremos en contacto con usted a la brevedad.",
+        "es": "Complete este formulario y nos pondremos en contacto con usted a la brevedad.",
+        "br": "Preencha este formulário e entraremos em contato com você em breve.",
+        "fr": "Veuillez remplir ce formulaire, nous vous contacterons dans les plus brefs délais.",
+        "it": "Compila questo modulo e ci metteremo in contatto con te al più presto.",
+        "de": "Bitte füllen Sie dieses Formular aus, wir werden uns in Kürze mit Ihnen in Verbindung setzen."
     },
     "Name": {
         "us": "Name",
