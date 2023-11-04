@@ -15,7 +15,8 @@ var sidebar = `
 <div class="w-100 display-flex flex-col padded color-secondary s-padded">
     <div class="display-flex flex-row spaced xs-padded no-padded-left no-padded-right ">
         <h4 class="font-s font-600 color-secondary rounded-s">Workspaces</h4>
-        <button onclick="launchModalWorkspace('')" class="border-none bg-tint color-white full-center text-center display-flex flex-row font-s font-500 s-padded-wide rounded no-wrap cursor-pointer">+ Add new</button>
+        <button onclick="launchModalWorkspace('')" class="display-none border-none bg-tint color-white full-center text-center display-flex flex-row font-s font-500 s-padded-wide rounded no-wrap cursor-pointer">+ Add new</button>
+
     </div>
     
     <div class="sidebarContent w-100 display-flex flex-col s-gap">

@@ -38,6 +38,7 @@ var coordinator =`
                 ${copyIcon}
             </span>
         </li>
+        <small class='text-left font-300 font-s color-secondary'>Keep this key in a safe place but do not lose it, if you do you will lose all your data.</small>
 
         <div class="text-center color-grey block-mode divider"></div>
 
