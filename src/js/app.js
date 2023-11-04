@@ -247,6 +247,10 @@
       });
     }
 
+    // Passive scroll setter for accesibility improve
+    document.addEventListener('touchstart', onTouchStart, {passive: true});
+
+
     // Function copy id element to clipboard
 
     function copyElementContent(elementId) {
