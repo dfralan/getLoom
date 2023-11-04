@@ -357,7 +357,7 @@ loom "Product" you will return in order and in this format, separated by  ?? , g
             svgSrc = `data:image/svg+xml,${encodeURIComponent(d)}`;
             let hasFlag = loomTag.hasAttribute('flag');
             let ind = '<span>' + " " + aLower + '</span>'
-            let flag = '<span><img src="' + svgSrc + '" width="' + imgWidth + '"></span>'
+            let flag = '<span><img alt="flag" src="' + svgSrc + '" width="' + imgWidth + '"></span>'
             var indicator = hasFlag ? flag + ind : ind;
             return {
                 indicator: indicator,
