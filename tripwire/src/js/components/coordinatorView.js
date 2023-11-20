@@ -16,7 +16,7 @@ var coordinator =`
 
         <div class="text-center color-grey block-mode divider"></div>
 
-        <div onclick='toggleCoordinatorModal()' class="btn display-flex cursor-pointer">
+        <div class="btn display-flex cursor-pointer">
             <span class='avatar-m shadow-dynamic bg-primary'></span>
         </div>
 
