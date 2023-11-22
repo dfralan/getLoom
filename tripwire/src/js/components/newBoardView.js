@@ -45,6 +45,7 @@ var boardcreationform =`
                 <small class="color-secondary">Add some tags splitted by ',' like: +54911234565, john@lotus.com, lotusmotors.com</small>
             </div>
 
+            <!-- New board modal 
             <div class="display-flex flex-col xs-gap">
                 <label class="color-primary font-xs font-500">
                     <span>Add a deadline</span>
@@ -54,6 +55,7 @@ var boardcreationform =`
                     <input class='steady-1-of-3 font-s color-primary fill-primary bg-body border-secondary border-solid rounded-s s-padded' type="time" id="timePickerDD">
                 </div>
             </div>
+            -->
 
             <p class="display-flex flex-row flex-start color-secondary fill-secondary font-s">
                 <span>
