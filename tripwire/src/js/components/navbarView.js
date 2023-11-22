@@ -25,7 +25,7 @@ var navbar =`
             </span>
 
             <input style='padding-right: 30px !important'
-                class="responsive-1 s-padded-wide bg-tertiary border-none rounded-s placeholder-secondary font-m color-primary"
+                class="responsive-1 s-padded-wide bg-tertiary border-none rounded-s placeholder-secondary font-s color-primary"
                 type="text" id="boardFilter" placeholder="Filter">
         </div>
 
